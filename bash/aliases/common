@@ -1,0 +1,46 @@
+# Display this file
+alias ah="cat ~/dotfiles/bash/aliases/common | highlight blue '^# .*' cyan '^alias' purple '".*"' red ' .*=' yellow '=' | less -R" 
+
+# Spec / Continuous Integration / Cucumber Conveniences
+alias cuke="cucumber features"
+alias build="rake spec && cucumber features"
+
+# Command Enhancements
+alias vi="mvim"
+
+# Utility
+alias reload="source ~/dotfiles/bash/aliases/common"
+alias ea="mvim -f ~/dotfiles/bash/aliases/common && reload" # Edit aliases
+alias ee="mvim -f ~/dotfiles/bash/env"
+
+# Quicker cd
+alias cg="cd /opt/ruby-enterprise/lib/ruby/gems/1.8/gems"
+function cs() {
+ cd ~/Sites/$*
+}
+
+# Common -- Some are from Damian Conway
+alias a="ls -A" # -A all except literal . ..
+alias la="ls -A -l -G"
+alias c="clear"
+alias cdd="cd -"  # goto last dir cd"ed from
+alias cl="clear; l"
+function cdc() { 
+    cd $1; ls 
+}
+alias cls="clear; ls"
+alias h="history"
+alias l.="ls -d .[^.]*"
+alias l="ls -lhGt"  # -l long listing, most recent first
+                    # -G color
+alias lh="ls -lh"
+alias ll="ls -lhG"  # -l long listing, human readable, no group info
+alias lt="ls -lt" # sort with recently modified first
+alias md="mkdir -p"
+alias s="cd .."   # up one dir
+
+
+# Rails generator goodness
+alias sg="./script/generate"
+alias sgm="./script/generate rspec_model"
+alias sgc="./script/generate rspec_controller"

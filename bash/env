@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+export EDITOR="mvim"
+export PATH=~/dotfiles/bin:/opt/ruby-enterprise/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
+export AUTOFEATURE=true

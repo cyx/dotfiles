@@ -1,0 +1,18 @@
+colorscheme railscasts
+set guifont=Monaco:h18
+ 
+if has("gui_running")
+  set transparency=10
+  set guioptions=egmrt
+end
+
+:noremap ,l <C-w>l
+:noremap ,h <C-w>h
+:noremap ,j <C-w>j
+:noremap ,k <C-w>k
+
+:noremap ,v :vsp<cr>:enew<cr>
+
+imap hh <Esc>
+
+
