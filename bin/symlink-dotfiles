@@ -11,4 +11,7 @@ ln -vfs ~/dotfiles/vim/vimrc.local ~/.vimrc.local
 ln -vfs ~/dotfiles/vim/gvimrc ~/.gvimc
 
 # GEMRC
-ln -vfs ~/dotfiles/etc/gemrc ~/.gemrc
+ln -vfs ~/dotfiles/etc/gemrc ~/.gemrc 
+
+# CREATE VIM BACKUP DIR
+mkdir -p ~/backup/vim/swap
