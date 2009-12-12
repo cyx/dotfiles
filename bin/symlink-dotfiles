@@ -14,4 +14,8 @@ ln -vfs ~/dotfiles/vim/gvimrc ~/.gvimc
 ln -vfs ~/dotfiles/etc/gemrc ~/.gemrc 
 
 # CREATE VIM BACKUP DIR
-mkdir -p ~/backup/vim/swap
+mkdir -p ~/backup/vim/swap 
+
+# SYMLINK AUTOTEST RELEVANT STUFF
+
+ln -vfs ~/dotfiles/autotest/dotfile ~/.autotest
