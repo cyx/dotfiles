@@ -2,7 +2,7 @@ colorscheme railscasts
 set guifont=Monaco:h18
  
 if has("gui_running")
-  set transparency=10
+  set transparency=20
   set guioptions=egmrt
 end
 
@@ -15,6 +15,8 @@ end
 :noremap ,t :FuzzyFinderTextMate<CR>
 :noremap ,r :FuzzyFinderTextMateRefreshFiles<CR>
 :noremap ,w <C-w>w
+:noremap <C-j> <Esc><C-w>j<C-w>_
+:noremap <C-k> <Esc><C-w>k<C-w>_
 
 set winminheight=0
 set winminwidth=0
