@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 
 Autotest.add_hook :initialize do |at|
+  at.clear_exceptions
+  at.add_exception(/config\/|coverage\/|db\/|doc\/|log\/|public\/stylesheets|public\/javascripts|public\/images|public\/system|script\/|tmp\/|vendor\/rails|vendor\/plugins|previous_failures\.txt/)
+
   %w{.svn .hg .git vendor solr}.each {|exception| 
     at.add_exception(exception)
   }
@@ -13,9 +16,12 @@ module Autotest::Growl
 
   Autotest.add_hook :ran_command do |at|
     # Example output: 324 examples, 2 failures, 13 pending
-    output = at.results.last.slice(/(\d+)\s.*examples?,\s(\d+)\s.*failures?/)
-    
-    if output =~ /[1-9]\sfailures?/
+    output = at.results.last.to_s.slice(/(\d+)\s.*examples?,\s(\d+)\s.*failures?/)
+  
+    if output.nil? or output == ''
+      growl "Test Results", "Exception was Raised", "~/dotfiles/autotest/images/fail.png", 2, "-s"
+ 
+    elsif output =~ /[1-9]\sfailures?/
       growl "Test Results", "#{output}", "~/dotfiles/autotest/images/fail.png", 2, "-s"
     else
       growl "Test Results", "#{output}", "~/dotfiles/autotest/images/pass.png"
