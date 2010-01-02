@@ -1,8 +1,8 @@
-colorscheme railscasts
+colorscheme wombat
 set guifont=Monaco:h18
  
 if has("gui_running")
-  set transparency=20
+  set transparency=10
   set guioptions=egmrt
 end
 
@@ -24,7 +24,7 @@ set winminwidth=0
 imap hh <Esc>
 
 let g:fuzzy_ceiling="10_000"
-let g:fuzzy_ignore="log/**;coverage/**;tmp/**;vendor/**;public/images/**;public/system/**"
+let g:fuzzy_ignore="log/**;coverage/**;tmp/**;vendor/**;public/images/**;public/system/**;doc/**;script/**;solr/**"
 let g:fuzzy_matching_limit="10"
 let g:fuzzy_enumerating_limit="10"
 

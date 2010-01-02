@@ -43,7 +43,7 @@ snippet desg Describe a shared group
 		${2}
 	end
 snippet it it block
-	it "${1:should do something}" do
+	it "should ${1:do something}" do
 		${2}
 	end
 snippet itp it (pending)
@@ -78,7 +78,7 @@ snippet afta After all tests
 		${1}
 	end
 snippet sh=
-	${1:target}.should == ${2:value}
+	${1:object}.should == ${2:value}
 	${3}
 snippet shn=
 	${1:target}.should_not == ${2:value}

@@ -2,7 +2,7 @@
 
 Autotest.add_hook :initialize do |at|
   at.clear_exceptions
-  at.add_exception(/config\/|coverage\/|db\/|doc\/|log\/|public\/stylesheets|public\/javascripts|public\/images|public\/system|script\/|tmp\/|vendor\/rails|vendor\/plugins|previous_failures\.txt|public\/secure_photos/)
+  at.add_exception(/config\/|coverage\/|db\/|doc\/|log\/|public\/stylesheets|public\/javascripts|public\/images|public\/system|script\/|tmp\/|vendor\/rails|vendor\/plugins|previous_failures\.txt|public\/secure_photos|webrat-(.*?)\.html|rerun\.txt/)
 
   %w{.svn .hg .git vendor solr}.each {|exception| 
     at.add_exception(exception)
