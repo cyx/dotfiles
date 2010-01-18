@@ -1,1 +1,2 @@
 specky.vba: call delete('/Users/cyx/.vim/syntax/rdoc.vim')|call delete('/Users/cyx/.vim/syntax/specrun.vim')|call delete('/Users/cyx/.vim/syntax/rspec.vim')|call delete('/Users/cyx/.vim/ftdetect/rspec.vim')|call delete('/Users/cyx/.vim/ftplugin/rspec.vim')|call delete('/Users/cyx/.vim/doc/specky.txt')|call delete('/Users/cyx/.vim/plugin/specky.vim')|call delete('/Users/cyx/.vim/snippets/rspec.snippets')
+tComment.vba: call delete('/Users/cyx/.vim/doc/tComment.txt')|call delete('/Users/cyx/.vim/plugin/tComment.vim')|call delete('/Users/cyx/.vim/autoload/tcomment.vim')

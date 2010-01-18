@@ -40,6 +40,17 @@ endif
 
 let g:colors_name = "railscasts"
 
+" Vim >= 7.0 specific colors
+if version >= 700
+  hi CursorLine guibg=#2d2d2d
+  hi CursorColumn guibg=#2d2d2d
+  hi MatchParen guifg=#f6f3e8 guibg=#857b6f gui=bold
+  hi Pmenu 		guifg=#f6f3e8 guibg=#2d2d2d
+  hi PmenuSel 	guifg=#BBBBBB guibg=#666666
+endif
+
+
+
 hi link htmlTag                     xmlTag
 hi link htmlTagName                 xmlTagName
 hi link htmlEndTag                  xmlEndTag

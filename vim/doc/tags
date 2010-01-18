@@ -51,6 +51,11 @@
 :NERDTreeToggle	NERD_tree.txt	/*:NERDTreeToggle*
 :RmVimball	pi_vimball.txt	/*:RmVimball*
 :Snippet	snippets_emu.txt	/*:Snippet*
+:TComment	tComment.txt	/*:TComment*
+:TCommentAs	tComment.txt	/*:TCommentAs*
+:TCommentBlock	tComment.txt	/*:TCommentBlock*
+:TCommentInline	tComment.txt	/*:TCommentInline*
+:TCommentRight	tComment.txt	/*:TCommentRight*
 :UseVimball	pi_vimball.txt	/*:UseVimball*
 :VimballList	pi_vimball.txt	/*:VimballList*
 CreateBundleSnippet	snippets_emu.txt	/*CreateBundleSnippet*
@@ -118,6 +123,7 @@ SpeckyIntro	specky.txt	/*SpeckyIntro*
 SpeckyLicense	specky.txt	/*SpeckyLicense*
 SpeckyOptions	specky.txt	/*SpeckyOptions*
 SpeckyVimrcExample	specky.txt	/*SpeckyVimrcExample*
+TCommentDefineType()	tComment.txt	/*TCommentDefineType()*
 Vimball-copyright	pi_vimball.txt	/*Vimball-copyright*
 [%	matchit.txt	/*[%*
 ]%	matchit.txt	/*]%*
@@ -292,6 +298,11 @@ g:speckyRunSpecCmd	specky.txt	/*g:speckyRunSpecCmd*
 g:speckyRunSpecKey	specky.txt	/*g:speckyRunSpecKey*
 g:speckySpecSwitcherKey	specky.txt	/*g:speckySpecSwitcherKey*
 g:speckyWindowType	specky.txt	/*g:speckyWindowType*
+g:tcommentMapLeader1	tComment.txt	/*g:tcommentMapLeader1*
+g:tcommentMapLeader2	tComment.txt	/*g:tcommentMapLeader2*
+g:tcommentMapLeaderOp1	tComment.txt	/*g:tcommentMapLeaderOp1*
+g:tcommentMapLeaderOp2	tComment.txt	/*g:tcommentMapLeaderOp2*
+g:tcommentOpModeExtra	tComment.txt	/*g:tcommentOpModeExtra*
 g:vimball_home	pi_vimball.txt	/*g:vimball_home*
 g:vimball_mkdir	pi_vimball.txt	/*g:vimball_mkdir*
 g:vimball_path_escape	pi_vimball.txt	/*g:vimball_path_escape*
@@ -517,6 +528,11 @@ snippets_emu-troubleshooting	snippets_emu.txt	/*snippets_emu-troubleshooting*
 snippets_emu.txt	snippets_emu.txt	/*snippets_emu.txt*
 specky	specky.txt	/*specky*
 specky.txt	specky.txt	/*specky.txt*
+tComment-Installation	tComment.txt	/*tComment-Installation*
+tComment-Key-Bindings	tComment.txt	/*tComment-Key-Bindings*
+tComment-Usage	tComment.txt	/*tComment-Usage*
+tComment-commands	tComment.txt	/*tComment-commands*
+tComment.txt	tComment.txt	/*tComment.txt*
 treeExplDirSort	vtreeexplorer.txt	/*treeExplDirSort*
 treeExplHidden	vtreeexplorer.txt	/*treeExplHidden*
 treeExplHidePattern	vtreeexplorer.txt	/*treeExplHidePattern*
