@@ -21,11 +21,7 @@ end
 set winminheight=0
 set winminwidth=0
 
-imap hh <Esc>
-
 let g:fuzzy_ceiling="10_000"
-let g:fuzzy_ignore="log/**;coverage/**;tmp/**;vendor/**;public/images/**;public/system/**;doc/**;script/**;solr/**"
+let g:fuzzy_ignore="log/**;coverage/**;tmp/**;vendor/**;public/images/**;public/system/**;doc/**;script/**;solr/**;public/secure_photos/**"
 let g:fuzzy_matching_limit="10"
 let g:fuzzy_enumerating_limit="10"
-
-
