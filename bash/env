@@ -1,5 +1,6 @@
 #!/bin/bash 
 
 export EDITOR="mvim -f"
-export PATH=~/dotfiles/bin:/opt/ruby-enterprise/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
+export PATH=~/dotfiles/bin:/opt/ruby-enterprise/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH:/opt/jruby/bin:/opt/scala/bin
 export AUTOFEATURE=true
+export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
