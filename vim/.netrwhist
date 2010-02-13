@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/cyx/Sites/lifethread-on-rails'
 let g:netrw_dirhist_2='/Users/cyx/bin/peep.dotfiles'
 let g:netrw_dirhist_3='/Users/cyx'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/cyx/Sites/yammer-time-tracker'
 let g:netrw_dirhist_6='/Users/cyx/Sites/recomed/config/initializers'
 let g:netrw_dirhist_7='/Users/cyx/Sites/recomed/features/browser/support'
 let g:netrw_dirhist_8='/Users/cyx/Sites/lt/config/environments'
+let g:netrw_dirhist_9='/Users/cyx/dotfiles/bash/aliases'

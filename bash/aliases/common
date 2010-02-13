@@ -1,3 +1,6 @@
+# HACK AROUND SUDO
+alias sudo='sudo env PATH=$PATH'
+
 # Display this file
 alias ah="cat ~/dotfiles/bash/aliases/common | highlight blue '^# .*' cyan '^alias' purple '".*"' red ' .*=' yellow '=' | less -R" 
 
