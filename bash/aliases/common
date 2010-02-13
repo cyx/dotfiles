@@ -5,13 +5,10 @@ alias ah="cat ~/dotfiles/bash/aliases/common | highlight blue '^# .*' cyan '^ali
 alias cuke="cucumber features"
 alias build="rake spec && cucumber features"
 
-# Command Enhancements
-alias vi="mvim"
-
 # Utility
 alias reload="source ~/dotfiles/bash/aliases/common"
-alias ea="mvim -f ~/dotfiles/bash/aliases/common && reload" # Edit aliases
-alias ee="mvim -f ~/dotfiles/bash/env"
+alias ea="vi ~/dotfiles/bash/aliases/common && reload" # Edit aliases
+alias ee="vi ~/dotfiles/bash/env"
 
 # Quicker cd
 alias cg="cd /opt/ruby-enterprise/lib/ruby/gems/1.8/gems"
