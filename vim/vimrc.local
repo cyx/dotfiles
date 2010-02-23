@@ -2,7 +2,7 @@ colorscheme railscasts
 set guifont=Monaco:h18
  
 if has("gui_running")
-  set transparency=10
+  set transparency=3
   set guioptions=egmrt
 end
 
