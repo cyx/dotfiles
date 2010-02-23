@@ -1,3 +1,9 @@
+alias rcp="scp -i ~/.ssh/recomed.pem"
+alias rails="if [[ -s ./script/rails ]]; then echo \"  -> script/rails\"; ./script/rails; else rails; fi"
+
+alias pgit-on="export GIT_SSH=~/dotfiles/bin/git-ssh;export GIT_AUTHOR_NAME='Cyril David and Tim Medina'; export GIT_AUTHOR_EMAIL='cyx-tim@sinefunc.com'"
+alias pgit-off="unset GIT_SSH; unset GIT_AUTHOR_NAME; unset GIT_AUTHOR_EMAIL"
+
 # Display this file
 alias ah="cat ~/dotfiles/bash/aliases/common | highlight blue '^# .*' cyan '^alias' purple '".*"' red ' .*=' yellow '=' | less -R" 
 
