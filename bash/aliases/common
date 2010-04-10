@@ -1,8 +1,4 @@
-alias rcp="scp -i ~/.ssh/recomed.pem"
-alias rails="if [[ -s ./script/rails ]]; then echo \"  -> script/rails\"; ./script/rails; else rails; fi"
-
-alias pgit-on="export GIT_SSH=~/dotfiles/bin/git-ssh;export GIT_AUTHOR_NAME='Cyril David and Tim Medina'; export GIT_AUTHOR_EMAIL='cyx-tim@sinefunc.com'"
-alias pgit-off="unset GIT_SSH; unset GIT_AUTHOR_NAME; unset GIT_AUTHOR_EMAIL"
+#!/bin/bash
 
 # Display this file
 alias ah="cat ~/dotfiles/bash/aliases/common | highlight blue '^# .*' cyan '^alias' purple '".*"' red ' .*=' yellow '=' | less -R" 
@@ -15,14 +11,29 @@ alias build="rake spec && cucumber features"
 alias vi="mvim"
 
 # Utility
-alias reload="source ~/dotfiles/bash/aliases/common"
+alias reload="source ~/.bashrc"
 alias ea="mvim -f ~/dotfiles/bash/aliases/common && reload" # Edit aliases
 alias ee="mvim -f ~/dotfiles/bash/env"
 
 # Quicker cd
-alias cg="cd /opt/ruby-enterprise/lib/ruby/gems/1.8/gems"
-function cs() {
- cd ~/Sites/$*
+function cg() {
+  if [ -d $GEM_HOME/gems ]
+  then
+    cd $GEM_HOME/gems
+
+    if [ -d $GEM_HOME/gems/$1* ]
+    then
+      cd $GEM_HOME/gems/$1*
+    fi
+      
+  else
+    if [ -d /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/$1* ]
+    then 
+      cd /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/$1*
+    else
+      cd /opt/ruby-enterprise/lib/ruby/gems/1.8/gems
+    fi
+  fi
 }
 
 # Common -- Some are from Damian Conway
