@@ -107,7 +107,7 @@ alias rp='touch tmp/restart.txt'
 alias sc='./script/console'
 alias sg='./script/generate'
 alias sp='./script/plugin'
-alias ss='./script/server'
+alias ss='thin start'
 alias tl='tail -f log/*.log'
 alias ts='thin start'
 
