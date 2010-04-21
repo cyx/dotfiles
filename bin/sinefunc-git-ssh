@@ -1,0 +1,3 @@
+#!/bin/sh
+exec ssh -i ~/.ssh/sinefunc_id_rsa "$@"
+
