@@ -1,5 +1,5 @@
 colorscheme ae-irblack
-set guifont=Monaco:h18
+set guifont=Monaco:h14
 
 set foldmethod=indent
 set foldminlines=100
@@ -8,9 +8,6 @@ if has("gui_running")
   set transparency=3
   set guioptions=egmrt
 end
-"
-":noremap ,t :FuzzyFinderTextMate<CR>
-":noremap ,r :FuzzyFinderTextMateRefreshFiles<CR>
 
 :noremap ,l <C-w>l
 :noremap ,h <C-w>h
@@ -38,8 +35,3 @@ map ,/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 
 set winminheight=0
 set winminwidth=0
-
-"let g:fuzzy_ceiling="10_000"
-"let g:fuzzy_ignore="log/**;coverage/**;tmp/**;vendor/**;public/images/**;public/system/**;doc/**;script/**;solr/**;public/secure_photos/**"
-"let g:fuzzy_matching_limit="10"
-"let g:fuzzy_enumerating_limit="10"
