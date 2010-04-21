@@ -26,6 +26,8 @@ au BufNewFile,BufRead Gemfile				set filetype=ruby
 au BufNewFile,BufRead *.erb,*.rhtml			set filetype=eruby
 
 au BufRead,BufNewFile *_spec.rb set filetype=rspec
+au BufRead,BufNewFile *_test.rb set filetype=ruby
+au BufRead,BufNewFile test_*.rb set filetype=ruby
 
 " Thorfile
 au BufNewFile,BufRead [tT]horfile,*.thor		set filetype=ruby

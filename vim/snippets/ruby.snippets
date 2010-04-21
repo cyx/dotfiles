@@ -1,6 +1,6 @@
 # #!/usr/bin/ruby
 snippet #!
-	#!/usr/bin/ruby
+	#!/usr/bin/env ruby
 
 # New Block
 snippet =b
@@ -336,7 +336,7 @@ snippet ts
 	require "tc_${1:test_case_file}"
 	require "tc_${2:test_case_file}"${3}
 snippet as
-	assert ${1:test}, "${2:Failure message.}"
+	assert ${1:test}${2:, "Failure message."}
 snippet ase
 	assert_equal ${1:expected}, ${2:actual}
 snippet asne
@@ -425,3 +425,34 @@ snippet ps
 	puts '${1}'${2}
 snippet pd
 	puts "${1}"${2}
+
+# Contest Related 
+snippet des
+	describe "${1:subject}" do
+		${2}
+	end
+snippet con
+	context "${1:event}" do
+		${2}
+	end
+snippet sh
+	should "${1:expectation}" do
+		${2}
+	end
+snippet test
+	test "${1:statement}" do
+		${2}
+	end
+snippet setup
+	setup do
+		${1}
+	end
+
+	${2}
+snippet tear
+	teardown do
+		${1}
+	end
+
+	${2}
+

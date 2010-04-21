@@ -1,0 +1,24 @@
+snippet formm
+	%form${1:#id}${2:.class-name}{:action  => "${3}", :method => "${4:post}",
+	  :enctype => "multipart/form-data"}${5}
+snippet form
+	%form${1:#id}${2:.class-name}{:action  => "${3}", :method => "${4:post}"}${5}
+snippet textfield
+	%input#${1:id}${2:.class-name}{:type  => "text", :name => "${3}", 
+	  :value => ${4}}${5}
+snippet password
+	%input#${1:id}${2:.class-name}{:type  => "password", :name => "${3}", 
+		:value => ${4}}${5}
+snippet file
+	%input#${1:id}${2:.class-name}{:type  => "file", :name => "${3}"}${4}
+snippet checkbox
+	%input#${1:id}${2:.class-name}{:type  => "checkbox", :name => "${3}", 
+		:value => ${4}}${5}
+snippet radio
+	%input#${1:id}${2:.class-name}{:type  => "radio", :name => "${3}", 
+		:value => ${4}}${5}
+snippet textarea
+	%textarea#${1:id}${2:.class-name}{:rows => "${3:5}", :cols => "${4:50}",
+	  :name => "${5}"}${6:= var}
+snippet label
+	%label${1:.class-name}{:for => "${2:field-id}"} ${3:some label}

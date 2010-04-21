@@ -1,10 +1,16 @@
-colorscheme railscasts
+colorscheme ae-irblack
 set guifont=Monaco:h18
- 
+
+set foldmethod=indent
+set foldminlines=100
+
 if has("gui_running")
   set transparency=3
   set guioptions=egmrt
 end
+"
+":noremap ,t :FuzzyFinderTextMate<CR>
+":noremap ,r :FuzzyFinderTextMateRefreshFiles<CR>
 
 :noremap ,l <C-w>l
 :noremap ,h <C-w>h
@@ -12,16 +18,28 @@ end
 :noremap ,k <C-w>k
 :noremap ,v :vsp<CR>:enew<CR>
 :noremap ,s :split<CR>:enew<CR>
-:noremap ,t :FuzzyFinderTextMate<CR>
-:noremap ,r :FuzzyFinderTextMateRefreshFiles<CR>
-:noremap ,w <C-w>w
-:noremap <C-j> <Esc><C-w>j<C-w>_
-:noremap <C-k> <Esc><C-w>k<C-w>_
+
+" Maximize current window
+:noremap ,- <C-W>_
+
+" New split, then maximize
+:noremap ,N <C-W>n<C-W>_
+
+" Even out all windows
+:noremap ,? <C-W>n<C-W>H<C-W>q
+
+:noremap ,c :only<CR>
+
+:noremap J <Esc><C-w>j<C-w>_
+:noremap K <Esc><C-w>k<C-w>_
+
+" Even out all columns, then maximize all columns
+map ,/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 
 set winminheight=0
 set winminwidth=0
 
-let g:fuzzy_ceiling="10_000"
-let g:fuzzy_ignore="log/**;coverage/**;tmp/**;vendor/**;public/images/**;public/system/**;doc/**;script/**;solr/**;public/secure_photos/**"
-let g:fuzzy_matching_limit="10"
-let g:fuzzy_enumerating_limit="10"
+"let g:fuzzy_ceiling="10_000"
+"let g:fuzzy_ignore="log/**;coverage/**;tmp/**;vendor/**;public/images/**;public/system/**;doc/**;script/**;solr/**;public/secure_photos/**"
+"let g:fuzzy_matching_limit="10"
+"let g:fuzzy_enumerating_limit="10"
