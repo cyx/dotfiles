@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# All the functions that follow just switch the GIT_AUTHOR_NAME
+# to give appropriate credit to the author and not just the committer
+function cyx() {
+  export GIT_SSH=~/dotfiles/bin/sinefunc-git-ssh
+  export GIT_AUTHOR_NAME='Cyril David'
+  export GIT_AUTHOR_EMAIL='cyx@sinefunc.com'
+}
+
+function cyx-tim() {
+  export GIT_SSH=~/dotfiles/bin/sinefunc-git-ssh
+  export GIT_AUTHOR_NAME='Cyril David and Tim Medina'
+  export GIT_AUTHOR_EMAIL='cyx+tim@sinefunc.com'
+}
+
+function cyx-mikong() {
+  export GIT_SSH=~/dotfiles/bin/sinefunc-git-ssh
+  export GIT_AUTHOR_NAME='Cyril David and Michael Galero'
+  export GIT_AUTHOR_EMAIL='cyx+mikong@sinefunc.com'
+}
+
+function reset-git() {
+  unset GIT_SSH
+  unset GIT_AUTHOR_NAME
+  unset GIT_AUTHOR_EMAIL
+}
+
