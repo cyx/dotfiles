@@ -15,6 +15,7 @@ end
 :noremap ,k <C-w>k
 :noremap ,v :vsp<CR>:enew<CR>
 :noremap ,s :split<CR>:enew<CR>
+:noremap ,T :TlistToggle<CR>
 
 " Maximize current window
 :noremap ,- <C-W>_
