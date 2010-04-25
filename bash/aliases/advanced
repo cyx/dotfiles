@@ -1,3 +1,23 @@
+#!/bin/bash
+
+function sc() {
+  if [ -f init.rb ];
+  then
+    irb -rinit
+  else
+    ./script/console
+  fi
+}
+
+function ss() {
+  if [ -f init.rb ];
+  then 
+    thin start -p 4567
+  else
+    ./script/server
+  fi
+}
+
 function take() { 
     mkdir -p "$1"
     cd "$1" 
@@ -104,10 +124,8 @@ function markdown() {
 alias mr='mongrel_rails start'
 alias ms='mongrel_rails stop'
 alias rp='touch tmp/restart.txt'
-alias sc='./script/console'
 alias sg='./script/generate'
 alias sp='./script/plugin'
-alias ss='thin start'
 alias tl='tail -f log/*.log'
 alias ts='thin start'
 
