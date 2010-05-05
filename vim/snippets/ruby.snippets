@@ -321,14 +321,16 @@ snippet opt
 		${6}
 	end
 snippet tc
-	require "test/unit"
+	require "test_helper"
 
-	require "${1:library_file_name}"
+	class ${1}Test < Test::Unit::TestCase
+		${2}
+	end
+snippet tcg
+	require "helper"
 
-	class Test${2:$1} < Test::Unit::TestCase
-		def test_${3:case_name}
-			${4}
-		end
+	class ${1}Test < Test::Unit::TestCase
+		${2}
 	end
 snippet ts
 	require "test/unit"
@@ -455,4 +457,8 @@ snippet tear
 	end
 
 	${2}
+snippet om
+	class ${1} < Ohm::Model
+		attribute ${2}${3}
+	end
 

@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+glob   = ARGV[0]
+except = Dir[*ARGV[1..-1]] if ARGV.length > 1
+
+Dir[glob].each do |file|
+  next if File.directory?(file)
+  next if except && except.include?(file)
+  next if file =~ /(gif|png|jpe?g|bmp)$/
+
+  puts "-----> Cleaning out #{file}"
+
+  data    = File.read(file)
+  
+  cleaned = 
+    data.
+      split("\n").
+      map { |line| line.gsub(/^\s+$/, "").gsub(/\s+$/, "") }.
+      join("\n").
+      strip
+
+  File.open(file, 'w') { |f| f.write cleaned }
+end

@@ -1,24 +1,30 @@
 snippet formm
-	%form${1:#id}${2:.class-name}{:action  => "${3}", :method => "${4:post}",
-	  :enctype => "multipart/form-data"}${5}
+	%form${1:.class-name}{:action  => "${2}", :method => "${3:post}",
+	  :enctype => "multipart/form-data"}${4}
 snippet form
-	%form${1:#id}${2:.class-name}{:action  => "${3}", :method => "${4:post}"}${5}
+	%form${1:.class-name}{:action  => "${2}", :method => "${3:post}"}${4}
 snippet textfield
-	%input#${1:id}${2:.class-name}{:type  => "text", :name => "${3}", 
-	  :value => ${4}}${5}
+	%input{:id => "${1:id}", :type => "${2:text}",${3: :required => true,}
+	       :name => "${4}", :value => ${5}${6:, :class => "class"}}
+	${7}
 snippet password
-	%input#${1:id}${2:.class-name}{:type  => "password", :name => "${3}", 
-		:value => ${4}}${5}
+	%input{:id => "${1:id}", :type => "password",${2: :required => true,}
+	       :name => "${3}", :value => ${4}${5:, :class => "class"}}
+	${6}
 snippet file
-	%input#${1:id}${2:.class-name}{:type  => "file", :name => "${3}"}${4}
+	%input{:id => "${1:id}", :type => "file",${2: :required => true,}
+	       :name => "${3}", :value => ${4}${5:, :class => "class"}}
+	${6}
 snippet checkbox
-	%input#${1:id}${2:.class-name}{:type  => "checkbox", :name => "${3}", 
-		:value => ${4}}${5}
+	%input{:id => "${1:id}", :type => "checkbox",${2: :required => true,}
+	       :name => "${3}", :value => ${4}${5:, :class => "class"}}
+	${6}
 snippet radio
-	%input#${1:id}${2:.class-name}{:type  => "radio", :name => "${3}", 
-		:value => ${4}}${5}
+	%input{:id => "${1:id}", :type => "radio",${2: :required => true,}
+	       :name => "${3}", :value => ${4}${5:, :class => "class"}}
+	${6}
 snippet textarea
-	%textarea#${1:id}${2:.class-name}{:rows => "${3:5}", :cols => "${4:50}",
-	  :name => "${5}"}${6:= var}
+	%textarea{:id => "${1:id}"${2: :required => true,}, :cols => ${3:50}, :rows => ${4:5},
+	          :name => "${5}"${6:, :class => "class"}}${7:= var}
 snippet label
 	%label${1:.class-name}{:for => "${2:field-id}"} ${3:some label}

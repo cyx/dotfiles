@@ -1,5 +1,8 @@
 colorscheme ae-irblack
-set guifont=Monaco:h14
+set guifont=Monaco:h18
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
 
 set foldmethod=indent
 set foldminlines=100
