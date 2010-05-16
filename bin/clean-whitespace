@@ -6,11 +6,11 @@ except = Dir[*ARGV[1..-1]] if ARGV.length > 1
 Dir[glob].each do |file|
   next if File.directory?(file)
   next if except && except.include?(file)
-  next if file =~ /(gif|png|jpe?g|bmp)$/
+  next if file =~ /(gif|png|jpe?g|bmp|ico|otf|ttf|gem)$/
 
   puts "-----> Cleaning out #{file}"
 
-  data    = File.read(file)
+  data = File.read(file)
   
   cleaned = 
     data.
