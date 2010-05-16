@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+module LocCounter
+  extend self
+
+  def print_loc_for_glob(glob)
+    count = 0
+
+    Dir[*glob].each do |file|
+      next if File.directory?(file)
+      
+      lines = loc(file)
+
+      out "#{ file } has #{ lines } lines"
+      count += lines
+    end
+  
+    puts
+    out "Total LOC: #{ count }"
+  end
+
+  def loc(file)
+    data = File.read(file)
+    code = data.split("\n").reject { |l| l =~ /^\s*$/ or l =~ /^\s*\#/ }
+    code.size
+  end
+
+  def out(str)
+    puts "-----> #{str}"  
+  end
+end
+
+LocCounter.print_loc_for_glob(ARGV)
