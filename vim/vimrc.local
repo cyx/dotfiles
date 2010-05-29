@@ -1,16 +1,17 @@
-colorscheme ae-irblack
+colorscheme twilight
 set guifont=Monaco:h18
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
 
+" Highlight lines starting from 81 above.
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" match OverLength /\%81v.\+/
 
-set foldmethod=indent
-set foldminlines=100
+" set foldmethod=indent
+" set foldminlines=100
 
-if has("gui_running")
-  set transparency=3
-  set guioptions=egmrt
-end
+" if has("gui_running")
+"   set transparency=3
+"   set guioptions=egmrt
+" end
 
 :noremap ,l <C-w>l
 :noremap ,h <C-w>h
@@ -39,3 +40,18 @@ map ,/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 
 set winminheight=0
 set winminwidth=0
+
+if has("autocmd")
+  " Enable filetype detection
+  filetype plugin indent on
+ 
+  " Restore cursor position
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+endif
+if &t_Co > 2 || has("gui_running")
+  " Enable syntax highlighting
+  syntax on
+endif
