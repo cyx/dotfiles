@@ -8,10 +8,10 @@ set guifont=Monaco:h18
 " set foldmethod=indent
 " set foldminlines=100
 
-" if has("gui_running")
-"   set transparency=3
-"   set guioptions=egmrt
-" end
+if has("gui_running")
+  " set transparency=3
+  set guioptions=egmrt
+end
 
 :noremap ,l <C-w>l
 :noremap ,h <C-w>h
