@@ -1,5 +1,5 @@
 colorscheme twilight
-set guifont=Monaco:h18
+set guifont=Monaco:h22
 
 " Highlight lines starting from 81 above.
 " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
