@@ -3,7 +3,7 @@
 function sc() {
   if [ -f init.rb ];
   then
-    irb -rinit
+    irb -r./init
   else
     ./script/console
   fi
@@ -59,7 +59,7 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
-alias gpp='git pull && git push'
+alias gpp='git pull --rebase && git push'
 # Commit pending changes and quote all args as message
 function gg() { 
     git commit -v -a -m "$*"
