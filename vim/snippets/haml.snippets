@@ -26,6 +26,10 @@ snippet radio
 snippet textarea
 	%textarea{id: "${1:id}"${2: required: "true",}, cols: ${3:50}, rows: ${4:5},
 	          name: "${5}"${6:, class: "class"}}${7:= var}
+snippet label
+	%label
+	  %span ${1}
+		${2}
 snippet a(
 	%a${1:.class-name}(href="${2:field-id}") ${3:some label}
 snippet a{
