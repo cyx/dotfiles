@@ -1,4 +1,4 @@
-colorscheme twilight
+colorscheme morning
 set guifont=Monaco:h22
 
 " Highlight lines starting from 81 above.
