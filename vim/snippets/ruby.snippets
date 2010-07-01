@@ -326,6 +326,14 @@ snippet tc
 	class ${1}Test < Test::Unit::TestCase
 		${2}
 	end
+snippet tst
+	require "stories_helper"
+
+	class ${1}Test < Test::Unit::TestCase
+		story "A ${2} should be able to ${3}" do
+			${4}
+		end
+	end
 snippet tcg
 	require "helper"
 
@@ -445,6 +453,10 @@ snippet test
 	test "${1:statement}" do
 		${2}
 	end
+snippet sc
+	scenario "${1:Some scenario}" do
+		${2}
+	end
 snippet setup
 	setup do
 		${1}
@@ -461,4 +473,3 @@ snippet om
 	class ${1} < Ohm::Model
 		attribute ${2}${3}
 	end
-
