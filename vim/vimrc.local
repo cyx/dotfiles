@@ -1,16 +1,10 @@
-colorscheme morning
-set guifont=Monaco:h22
-
-" Highlight lines starting from 81 above.
-" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-" match OverLength /\%81v.\+/
-
-" set foldmethod=indent
-" set foldminlines=100
+colorscheme twilight
 
 if has("gui_running")
-  " set transparency=3
-  set guioptions=egmrt
+  set guifont=Monaco:h18
+  set guioptions=egmt
+  set guioptions-=r
+  set columns=115
 end
 
 :noremap ,l <C-w>l
