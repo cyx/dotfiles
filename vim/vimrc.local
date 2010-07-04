@@ -1,7 +1,7 @@
 colorscheme twilight
 
 if has("gui_running")
-  set guifont=Monaco:h18
+  set guifont=Monaco:h20
   set guioptions=egmt
   set guioptions-=r
   set columns=115
@@ -14,6 +14,9 @@ end
 :noremap ,v :vsp<CR>:enew<CR>:pwd<CR>
 :noremap ,s :split<CR>:enew<CR>:pwd<CR>
 :noremap ,T :TlistToggle<CR>
+:noremap ,w :set columns=78<CR>
+:noremap ,m :set columns=157<CR>
+
 
 " Maximize current window
 :noremap ,- <C-W>_
