@@ -1,4 +1,5 @@
-colorscheme twilight
+" colorscheme morning " Used for Super Glossy monitors
+colorscheme ae-irblack " My preferred theme
 
 if has("gui_running")
   set guifont=Monaco:h20
