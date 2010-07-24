@@ -1,5 +1,9 @@
 #!/bin/bash
+vack() {
+  vi -p -c "/$1" $(ack -l $@)
+}
 
+alias ack="ack -a"
 alias gpr="git pull --rebase"
 
 alias t="ruby -Ilib:test"
