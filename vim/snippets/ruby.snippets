@@ -471,5 +471,8 @@ snippet tear
 	${2}
 snippet om
 	class ${1} < Ohm::Model
-		attribute ${2}${3}
+		attribute :${2}${3}
 	end
+snippet att
+	attribute :${1:attribute}
+	${2}
