@@ -1,6 +1,6 @@
 #!/bin/bash
 vack() {
-  vi -p -c "/$1" $(ack -l $@)
+  mvim -p -c "/$1" $(ack -l $@)
 }
 
 alias ack="ack -a"
