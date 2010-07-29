@@ -8,6 +8,8 @@ if has("gui_running")
   set columns=78
 end
 
+set number
+
 :noremap ,l <C-w>l
 :noremap ,h <C-w>h
 :noremap ,j <C-w>j
@@ -17,6 +19,7 @@ end
 :noremap ,T :TlistToggle<CR>
 :noremap ,w :set columns=78<CR>
 :noremap ,m :set columns=157<CR>
+:noremap ,r :! ruby -Ilib:test %<CR>
 
 
 " Maximize current window
@@ -28,7 +31,7 @@ end
 " Even out all windows
 :noremap ,? <C-W>n<C-W>H<C-W>q
 
-:noremap ,c :only<CR>
+:noremap ,c :only<CR>:tabonly<CR>
 
 :noremap J <Esc><C-w>j<C-w>_
 :noremap K <Esc><C-w>k<C-w>_
