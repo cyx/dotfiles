@@ -1,5 +1,5 @@
 " colorscheme morning " Used for Super Glossy monitors
-colorscheme ae-irblack " My preferred theme
+colorscheme vibrantink " My preferred theme
 
 if has("gui_running")
   set guifont=Monaco:h20
