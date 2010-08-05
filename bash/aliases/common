@@ -3,9 +3,12 @@ vack() {
   mvim -p -c "/$1" $(ack -l $@)
 }
 
-alias ack="ack -a"
-alias gpr="git pull --rebase"
+reload-peepopen() {
+  ps aux | grep -v 'grep' | grep PeepOpen.app | awk '{print $2}' | xargs kill -TERM
+  open /Applications/PeepOpen.app
+}
 
+alias ack="ack -a"
 alias t="ruby -Ilib:test"
 
 # Display this file
