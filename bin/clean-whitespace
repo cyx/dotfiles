@@ -17,7 +17,7 @@ Dir[glob].each do |file|
       split("\n").
       map { |line| line.gsub(/^\s+$/, "").gsub(/\s+$/, "") }.
       join("\n").
-      strip + "\n"
+      strip
 
-  File.open(file, 'w') { |f| f.write cleaned }
+  File.open(file, 'w') { |f| f.write cleaned + "\n\n" }
 end
