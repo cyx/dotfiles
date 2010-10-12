@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Map mvim to the commonly used-by-habit `vi` command.
-alias vi="mvim"
-
 # Kudos to djanowski for this. Use ack to search files and open it in
 # `vi` with the searched text as the last searched phrase in vi.
 vack() {
