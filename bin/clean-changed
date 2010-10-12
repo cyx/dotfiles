@@ -1,0 +1,8 @@
+#! /usr/bin/env ruby
+
+files = `git status`.scan(/^#\s+modified:(.*)$/).map { |e| e.first.strip }
+
+files.each do |file|
+  puts "clean-whitespace #{file}"
+  `clean-whitespace #{file}`
+end
