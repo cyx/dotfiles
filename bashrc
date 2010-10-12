@@ -3,3 +3,4 @@
 . ~/dotfiles/bash/aliases/common
 . ~/dotfiles/bash/aliases/git
 . ~/dotfiles/bash/aliases/advanced
+. ~/dotfiles/bash/aliases/ruby
