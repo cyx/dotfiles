@@ -19,5 +19,5 @@ Dir[glob].each do |file|
       join("\n").
       strip
 
-  File.open(file, 'w') { |f| f.write cleaned + "\n\n" }
+  File.open(file, 'w') { |f| f.write cleaned }
 end
