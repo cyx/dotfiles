@@ -1,74 +1,49 @@
 #!/bin/bash
+
+# Map mvim to the commonly used-by-habit `vi` command.
+alias vi="mvim"
+
+# Kudos to djanowski for this. Use ack to search files and open it in
+# `vi` with the searched text as the last searched phrase in vi.
 vack() {
   mvim -p -c "/$1" $(ack -l $@)
 }
 
-reload-peepopen() {
-  ps aux | grep -v 'grep' | grep PeepOpen.app | awk '{print $2}' | xargs kill -TERM
-  open /Applications/PeepOpen.app
-}
-
+# Search all files by default. This fixes the problem that *.css, *.less, 
+# *.sass files aren't usually seacrched.
 alias ack="ack -a"
-alias t="ruby -Ilib:test"
 
-# Display this file
-alias ah="cat ~/dotfiles/bash/aliases/common | highlight blue '^# .*' cyan '^alias' purple '".*"' red ' .*=' yellow '=' | less -R" 
-
-# Spec / Continuous Integration / Cucumber Conveniences
-alias cuke="cucumber features"
-alias build="rake spec && cucumber features"
-
-# Command Enhancements
-alias vi="mvim"
+# Display this file, with basic highlighting.
+alias ah="cat ~/dotfiles/bash/aliases/common | \
+          highlight \
+            blue '^# .*' \
+            cyan '^alias' \
+            purple '".*"' \
+            red ' .*=' \
+            yellow '=' | less -R" 
 
 # Utility
 alias reload="source ~/.bashrc"
-alias ea="mvim -f ~/dotfiles/bash/aliases/common && reload" # Edit aliases
-alias ee="mvim -f ~/dotfiles/bash/env"
 
-# Quicker cd
-function cg() {
-  if [ -d $GEM_HOME/gems ]
-  then
-    cd $GEM_HOME/gems
+# Edit aliases.
+alias ea="mvim -f ~/dotfiles/bash/aliases/common && reload" 
 
-    if [ -d $GEM_HOME/gems/$1* ]
-    then
-      cd $GEM_HOME/gems/$1*
-    fi
-      
-  else
-    if [ -d /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/$1* ]
-    then 
-      cd /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/$1*
-    else
-      cd /opt/ruby-enterprise/lib/ruby/gems/1.8/gems
-    fi
-  fi
-}
+# Edit environment vars.
+alias ee="mvim -f ~/dotfiles/bash/env && reload"
 
-# Common -- Some are from Damian Conway
-alias a="ls -A" # -A all except literal . ..
+# Common commands.
+alias a="ls -A"           # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c="clear"
-alias cdd="cd -"  # goto last dir cd"ed from
+alias cdd="cd -"          # goto last dir cd"ed from
 alias cl="clear; l"
-function cdc() { 
-    cd $1; ls 
-}
 alias cls="clear; ls"
 alias h="history"
 alias l.="ls -d .[^.]*"
-alias l="ls -lhGt"  # -l long listing, most recent first
-                    # -G color
+alias l="ls -lhGt"        # -l long listing, most recent first
+                          # -G color
 alias lh="ls -lh"
-alias ll="ls -lhG"  # -l long listing, human readable, no group info
-alias lt="ls -lt" # sort with recently modified first
+alias ll="ls -lhG"        # -l long listing, human readable, no group info
+alias lt="ls -lt"         # sort with recently modified first
 alias md="mkdir -p"
-alias s="cd .."   # up one dir
-
-
-# Rails generator goodness
-alias sg="./script/generate"
-alias sgm="./script/generate rspec_model"
-alias sgc="./script/generate rspec_controller"
+alias ..="cd .."          # up one dir

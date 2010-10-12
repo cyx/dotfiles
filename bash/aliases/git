@@ -1,5 +1,50 @@
 #!/bin/bash
 
+# Git
+alias ungit="find . -name '.git' -exec rm -rf {} \;"
+alias gb='git branch'
+alias gba='git branch -a'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gpp='git pull && git push'
+# Commit pending changes and quote all args as message
+function gg() { 
+    git commit -v -a -m "$*"
+}
+alias gco='git checkout'
+alias gd='git diff'
+alias gdm='git diff master'
+alias gl='git pull'
+alias gnp="git-notpushed"
+alias gp='git push'
+alias gst='git status'
+alias gt='git status'
+alias g='git status'
+alias eg='mate .git/config'
+# Git clone from GitHub
+function gch() {
+  git clone git://github.com/$USER/$1.git
+}
+
+# Setup a tracking branch from [remote] [branch_name]
+function gbt() { 
+  git branch --track $2 $1/$2 && git checkout $2 
+}
+# Quickly clobber a file and checkout
+function grf() { 
+  rm $1
+  git checkout $1 
+}
+# Call from inside an initialized Git repo, with the name of the repo.
+function new-git() {
+  ssh git@example.com "mkdir $1.git && cd $1.git && git --bare init"
+  git remote add origin git@example.com:$1.git
+  git push origin master
+  git config branch.master.remote origin
+  git config branch.master.merge refs/heads/master
+  git config push.default current
+}
+
 # All the functions that follow just switch the GIT_AUTHOR_NAME
 # to give appropriate credit to the author and not just the committer
 function cyx() {
@@ -26,3 +71,4 @@ function reset-git() {
   unset GIT_AUTHOR_EMAIL
 }
 
+alias gitx="open -a /Applications/GitX.app"
