@@ -1,8 +1,0 @@
-colorscheme vibrantink
-
-if has("gui_running")
-  set guifont=Monaco:h20
-  set guioptions=egmt
-  set guioptions-=r
-  set columns=78
-end
