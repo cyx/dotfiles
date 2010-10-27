@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+Encoding.default_external = "UTF-8"
+
 glob   = ARGV[0]
 except = Dir[*ARGV[1..-1]] if ARGV.length > 1
 
@@ -10,14 +12,18 @@ Dir[glob].each do |file|
 
   puts "-----> Cleaning out #{file}"
 
-  data = File.read(file)
-  
-  cleaned = 
-    data.
-      split("\n").
-      map { |line| line.gsub(/^\s+$/, "").gsub(/\s+$/, "") }.
-      join("\n").
-      strip
+  data = File.read(file, encoding: "UTF-8")
 
-  File.open(file, 'w') { |f| f.write cleaned }
+  begin
+    cleaned =
+      data.
+        split("\n").
+        map { |line| line.gsub(/^\s+$/, "").gsub(/\s+$/, "") }.
+        join("\n").
+        strip
+
+    File.open(file, 'w') { |f| f.write cleaned }
+  rescue
+    puts "!! Unable to clean #{file}"
+  end
 end
