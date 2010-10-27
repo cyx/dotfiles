@@ -3,7 +3,7 @@
 # Kudos to djanowski for this. Use ack to search files and open it in
 # `vi` with the searched text as the last searched phrase in vi.
 vack() {
-  mvim -p -c "/$1" $(ack -l $@)
+  vi -p -c "/$1" $(ack -l $@)
 }
 
 # Search all files by default. This fixes the problem that *.css, *.less, 
