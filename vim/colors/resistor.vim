@@ -2,7 +2,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-" set t_Co=256
+set t_Co=256
 highlight Normal ctermfg=White ctermbg=Black
 highlight Number ctermfg=White ctermbg=Black
 highlight LineNr ctermfg=DarkGray ctermbg=Black
@@ -36,4 +36,3 @@ highlight StatusLine ctermfg=Gray ctermbg=Black
 highlight StatusLineNC ctermfg=DarkGray ctermbg=Black
 highlight CursorLine cterm=NONE  ctermbg=NONE
 highlight MatchParen ctermbg=Black ctermfg=DarkYellow
-

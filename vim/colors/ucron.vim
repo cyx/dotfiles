@@ -2,14 +2,14 @@ if exists("syntax_on")
   syntax reset
 endif
 
-" set t_Co=256
+set t_Co=256
 highlight Normal ctermfg=White ctermbg=Black
 highlight Number ctermfg=White ctermbg=Black
 highlight LineNr ctermfg=DarkGray ctermbg=Black
 highlight Folded ctermfg=DarkBlue ctermbg=Black
 highlight Keyword ctermfg=5
 highlight Define ctermfg=Brown
-highlight Comment ctermfg=DarkGray
+highlight Comment ctermfg=Gray
 highlight Type ctermfg=6
 highlight rubySymbol ctermfg=Brown
 highlight Identifier ctermfg=Yellow
