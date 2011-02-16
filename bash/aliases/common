@@ -1,9 +1,17 @@
 #!/bin/bash
 
+ssh-tunnel() {
+  ssh DG-APP1 -R :8888:127.0.0.1:4567 sleep 99999
+}
+
+global() {
+  cd $GEM_HOME/../ruby-1.9.2-p0\@global/gems/$@* && vi
+}
+
 # Kudos to djanowski for this. Use ack to search files and open it in
 # `vi` with the searched text as the last searched phrase in vi.
 vack() {
-  vi -p -c "/$1" $(ack -l $@)
+  vi -p -c "/$1" $(ack -al $@)
 }
 
 # Search all files by default. This fixes the problem that *.css, *.less, 
