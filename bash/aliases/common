@@ -1,5 +1,17 @@
 #!/bin/bash
 
+gush() {
+  git push origin $(br)
+}
+
+gup() {
+  git pull
+}
+
+br() {
+  test -d .git && git symbolic-ref HEAD 2> /dev/null | cut -d/ -f3
+}
+
 ssh-tunnel() {
   ssh DG-APP1 -R :8888:127.0.0.1:4567 sleep 99999
 }
