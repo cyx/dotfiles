@@ -1,4 +1,5 @@
 #!/bin/bash
+alias e="mvim"
 
 gush() {
   git push origin $(br)
@@ -13,7 +14,7 @@ br() {
 }
 
 ssh-tunnel() {
-  ssh DG-APP1 -R :8888:127.0.0.1:4567 sleep 99999
+  ssh DG-SANDBOX -R :8888:127.0.0.1:4567 sleep 99999
 }
 
 global() {
@@ -26,7 +27,7 @@ vack() {
   vi -p -c "/$1" $(ack -al $@)
 }
 
-# Search all files by default. This fixes the problem that *.css, *.less, 
+# Search all files by default. This fixes the problem that *.css, *.less,
 # *.sass files aren't usually seacrched.
 alias ack="ack -a"
 
@@ -37,13 +38,13 @@ alias ah="cat ~/dotfiles/bash/aliases/common | \
             cyan '^alias' \
             purple '".*"' \
             red ' .*=' \
-            yellow '=' | less -R" 
+            yellow '=' | less -R"
 
 # Utility
 alias reload="source ~/.bashrc"
 
 # Edit aliases.
-alias ea="mvim -f ~/dotfiles/bash/aliases/common && reload" 
+alias ea="mvim -f ~/dotfiles/bash/aliases/common && reload"
 
 # Edit environment vars.
 alias ee="mvim -f ~/dotfiles/bash/env && reload"

@@ -11,23 +11,22 @@ function sc() {
 
 function ss() {
   if [ -f init.rb ];
-  then 
+  then
     thin start -p 4567
   else
     ./script/server
   fi
 }
 
-function take() { 
+function take() {
     mkdir -p "$1"
-    cd "$1" 
+    cd "$1"
 }
 
-alias e='exit'
 alias k9="killall -9"
 
-function killnamed () { 
-    ps ax | grep $1 | cut -d ' ' -f 2 | xargs kill 
+function killnamed () {
+    ps ax | grep $1 | cut -d ' ' -f 2 | xargs kill
 }
 
 function zipr() {
@@ -41,8 +40,8 @@ alias ff='open -a Firefox'
 # General code
 
 # From Chris Wanstrath
-function pless() { 
-    pygmentize $1 | less -r 
+function pless() {
+    pygmentize $1 | less -r
 }
 
 # Processes
@@ -56,20 +55,20 @@ function new-hg() {
 }
 
 # Setup a tunnel
-function haproxyssh() { 
-  ssh -L7997:127.0.0.1:7997 deploy@$1.com 
+function haproxyssh() {
+  ssh -L7997:127.0.0.1:7997 deploy@$1.com
 }
 
 # Syntax check Javascript
-function jsc() { 
-  jsl -conf /etc/jsl/jsl.conf -process $1 
+function jsc() {
+  jsl -conf /etc/jsl/jsl.conf -process $1
 }
 
-function aiff2mp3() { 
-  lame -h -V 0 $1.aif $1.mp3 
+function aiff2mp3() {
+  lame -h -V 0 $1.aif $1.mp3
 }
-function wav2mp3() { 
-  lame -h -V 0 $1.wav $1.mp3 
+function wav2mp3() {
+  lame -h -V 0 $1.wav $1.mp3
 }
 
 
@@ -79,8 +78,8 @@ alias sx="xcodebuild clean && ~/src/checker-0.146/scan-build -k -V xcodebuild"
 # Analyze test build
 alias sxt="xcodebuild -target Test clean && ~/src/checker-0.146/scan-build -k -V xcodebuild -target Test"
 # Call with -target Foo
-function sxx() { 
-  xcodebuild $* clean && ~/src/checker-0.146/scan-build -k -V xcodebuild $* 
+function sxx() {
+  xcodebuild $* clean && ~/src/checker-0.146/scan-build -k -V xcodebuild $*
 }
 
 alias ox="open *.xcodeproj"
@@ -136,4 +135,3 @@ function __rm_single_file(){
         echo "No such file or directory: $file"
     fi
 }
-
