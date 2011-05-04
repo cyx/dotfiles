@@ -14,7 +14,7 @@ br() {
 }
 
 ssh-tunnel() {
-  ssh DG-SANDBOX -R :8888:127.0.0.1:4567 sleep 99999
+  ssh DG-SANDBOX -R :8888:127.0.0.1:9393 sleep 99999
 }
 
 global() {

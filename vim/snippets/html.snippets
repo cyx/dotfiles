@@ -153,17 +153,16 @@ snippet movie
 		`Close()[1:]`>
 	</object>${6}
 snippet fieldset
-	<fieldset id="$1">
-		<legend>${1:name}</legend>
-
-		${3}
+	<fieldset>
+		${1}
+	</fieldset>
+snippet fieldsetc
+	<fieldset class="${1:name}">
+		${2}
 	</fieldset>
 snippet form
-	<form action="${1:`Filename('$1_submit')`}" method="${2:get}" accept-charset="utf-8">
-		${3}
-
-
-	<p><input type="submit" value="Continue &rarr;"`Close()`></p>
+	<form class="${1:name}" action="${2:`Filename('$1_submit')`}" method="${3:get}">
+		${4}
 	</form>
 snippet h1i
 	<h1 id="${1:heading}">${2:$1}</h1>
@@ -172,9 +171,7 @@ snippet h1
 snippet h1c
 	<h1 class="${1:name}">${2}</h1>
 snippet input
-	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}"`Close()`>${4}
-snippet label
-	<label for="${2:$1}">${1:name}</label><input type="${3:text/submit/hidden/button}" name="${4:$2}" value="${5}" id="${6:$2}"`Close()`>${7}
+	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="<%= ${3} %>"`Close()`>${4}
 snippet link
 	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" charset="utf-8"`Close()`>${4}
 snippet mailto
@@ -198,6 +195,8 @@ snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
 snippet h
 	<%= ${1:out} %>${2}
+snippet hh
+	<%== ${1:out} %>${2}
 snippet c
 	<% ${1} %>${2}
 snippet cdn
@@ -264,14 +263,22 @@ snippet spanc
 	<span class="${1:name}">
 		${2}
 	</span>
+snippet label
+	<label>
+	  ${1}
+	</label>
 snippet h2
-	<h2>
-		${1}
-	</h2>
+	<h2>${1}</h2>
 snippet h2c
-	<h2 class="${1:name}">
-		${1}
-	</h2>
+	<h2 class="${1:name}">${1}</h2>
+snippet h3
+	<h3>${1}</h3>
+snippet h3c
+	<h3 class="${1:name}">${1}</h3>
+snippet h4
+	<h4>${1}</h4>
+snippet h4c
+	<h4 class="${1:name}">${1}</h4>
 snippet img
 	<img src="<%= cdn("${1}") %>" alt="${2}">
 snippet b
