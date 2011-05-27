@@ -23,6 +23,8 @@ set winminwidth=0
 :noremap ,r :! ruby -Ilib:test %<CR>
 :noremap ,/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 
+:noremap ,n :NERDTreeToggle<CR>
+
 " Scrollbars
 " ============================================================================
 " set sidescrolloff=2
