@@ -36,9 +36,10 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 set tabstop=2
-" set smarttab
-set ai
-" set si
+set smarttab
+set textwidth=0
+set showtabline=2
+set laststatus=2
 
 " Searching
 " ============================================================================
@@ -77,4 +78,6 @@ set wildmode=list:longest
 set encoding=utf-8
 set fileencoding=utf-8
 
-filetype plugin indent on
+filetype on
+filetype plugin on
+filetype indent on
