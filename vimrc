@@ -8,6 +8,9 @@ set equalalways
 set winminheight=0
 set winminwidth=0
 
+let mapleader = ","
+let maplocalleader = ","
+
 :noremap ,v :vsp<CR>:enew<CR>:pwd<CR>
 :noremap ,s :split<CR>:enew<CR>:pwd<CR>
 :noremap ,l <C-w>l
