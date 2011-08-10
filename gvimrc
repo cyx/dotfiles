@@ -1,4 +1,4 @@
-colorscheme mustang
+colorscheme wombat
 
 if has("gui_running")
   set guioptions=egmrt
