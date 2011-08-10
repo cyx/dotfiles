@@ -40,6 +40,7 @@ set softtabstop=2
 set shiftwidth=2
 set tabstop=2
 set smarttab
+set autoindent
 set textwidth=0
 set showtabline=2
 set laststatus=2
@@ -81,6 +82,4 @@ set wildmode=list:longest
 set encoding=utf-8
 set fileencoding=utf-8
 
-filetype on
-filetype plugin on
-filetype indent on
+filetype indent plugin on
