@@ -35,7 +35,7 @@ syn keyword moteEnd contained else elsif end
 syn region moteLine matchgroup=moteDelim start="^\s*%" end="$" keepend contains=@rubyTop,moteEnd
 
 " Variables
-syn region moteVariable matchgroup=moteDelim start="\${" end="}" contains=@rubyTop
+syn region moteVariable matchgroup=moteDelim start="{{" end="}}" contains=@rubyTop
 
 " Newline Escapes
 syn match moteEscape /\\$/

@@ -1,7 +1,8 @@
 # #!/usr/bin/ruby
 snippet #!
 	#!/usr/bin/env ruby
-
+snippet reqf
+	require File.expand_path("${1}", File.dirname(__FILE__))${2}
 # New Block
 snippet =b
 	=begin rdoc
@@ -321,9 +322,9 @@ snippet opt
 		${6}
 	end
 snippet tc
-	require "test_helper"
+	require File.expand_path("helper", File.dirname(__FILE__))
 
-	class ${1}Test < Test::Unit::TestCase
+	test "${1}" do
 		${2}
 	end
 snippet tst
