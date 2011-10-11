@@ -258,29 +258,29 @@ snippet p
 		${1}
 	</p>
 snippet span
-	<span>${1}</span>
+	<span>${1}</span>${2}
 snippet spanc
 	<span class="${1:name}">
 		${2}
-	</span>
+	</span>${3}
 snippet label
 	<label>
 	  ${1}
-	</label>
+	</label>${2}
 snippet h2
-	<h2>${1}</h2>
+	<h2>${1}</h2>${2}
 snippet h2c
-	<h2 class="${1:name}">${1}</h2>
+	<h2 class="${1:name}">${2}</h2>${3}
 snippet h3
-	<h3>${1}</h3>
+	<h3>${1}</h3>${2}
 snippet h3c
-	<h3 class="${1:name}">${1}</h3>
+	<h3 class="${1:name}">${2}</h3>${3}
 snippet h4
 	<h4>${1}</h4>${2}
 snippet h4c
-	<h4 class="${1:name}">${1}</h4>${2}
+	<h4 class="${1:name}">${2}</h4>${3}
 snippet img
-	<img src="<%= cdn("${1}") %>" alt="${2}">${3}
+	<img src="{{ cdn("${1}") }}" alt="${2}">${3}
 snippet b
 	<b>${1}</b>${2}
 snippet em
