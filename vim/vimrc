@@ -31,7 +31,7 @@ let maplocalleader = ","
 :noremap <leader>n :NERDTreeToggle<CR>
 
 :noremap <leader>tt :tabnew<CR>
-:noremap <leader>te :tabedit <TAB>
+:noremap <leader>te :tabedit 
 :noremap <leader>tc :tabclose<CR>
 :noremap <leader>tn :tabnext<CR>
 :noremap <leader>tp :tabprevious<CR>
