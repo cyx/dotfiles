@@ -1,0 +1,82 @@
+call pathogen#infect()
+
+syntax on
+colorscheme vividchalk
+filetype indent plugin on
+
+" Windows
+" ============================================================================
+set splitbelow splitright
+set equalalways
+set winminheight=0
+set winminwidth=0
+
+let mapleader = ","
+let maplocalleader = ","
+
+:noremap <leader>v :vsp<CR>:enew<CR>:pwd<CR>
+:noremap <leader>s :split<CR>:enew<CR>:pwd<CR>
+:noremap <leader>l <C-w>l
+:noremap <leader>h <C-w>h
+:noremap <leader>j <C-w>j
+:noremap <leader>k <C-w>k
+:noremap <leader>- <C-W>_                       
+:noremap <leader>N <C-W>n<C-W>_
+:noremap <leader>? <C-W>n<C-W>H<C-W>q
+:noremap <leader>c :only<CR>:tabonly<CR>
+:noremap J <Esc><C-w>j<C-w>_
+:noremap K <Esc><C-w>k<C-w>_
+:noremap <leader>r :! cutest %<CR>
+:noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
+:noremap <leader>n :NERDTreeToggle<CR>
+
+:noremap <leader>tt :tabnew<CR>
+:noremap <leader>te :tabedit <TAB>
+:noremap <leader>tc :tabclose<CR>
+:noremap <leader>tn :tabnext<CR>
+:noremap <leader>tp :tabprevious<CR>
+:noremap <leader>tf :tabfirst<CR>
+:noremap <leader>tl :tablast<CR>
+:noremap <leader>tm :tabmove<CR>
+
+" Tabs
+" ============================================================================
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set smarttab
+set autoindent
+set textwidth=0
+set showtabline=2
+set laststatus=2
+
+" Searching
+" ============================================================================
+set hlsearch   " highlight search
+set incsearch  " incremental search, search as you type
+set ignorecase " Ignore case when searching 
+set smartcase  " Ignore case when searching lowercase
+
+" Directories
+" ============================================================================
+" Setup backup location and enable
+set backupdir=~/.backup/vim
+set backup
+
+" Set Swap directory
+set directory=~/.backup/vim/swap
+
+" Change file completion to mimic shell behavior
+set wildmenu
+set wildmode=list:longest
+
+" Inser New Line
+" ============================================================================
+:noremap <S-Enter> O<ESC> 
+:noremap <Enter> o<ESC>
+
+" Set encodings to UTF8
+" ============================================================================
+set encoding=utf-8
+set fileencoding=utf-8
