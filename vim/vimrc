@@ -2,6 +2,7 @@ call pathogen#infect()
 
 syntax on
 colorscheme vividchalk
+filetype indent plugin on
 
 " Windows
 " ============================================================================
@@ -38,11 +39,6 @@ let maplocalleader = ","
 :noremap <leader>tl :tablast<CR>
 :noremap <leader>tm :tabmove<CR>
 
-" Scrollbars
-" ============================================================================
-" set sidescrolloff=2
-" set numberwidth=4
-
 " Tabs
 " ============================================================================
 set expandtab
@@ -61,13 +57,6 @@ set hlsearch   " highlight search
 set incsearch  " incremental search, search as you type
 set ignorecase " Ignore case when searching 
 set smartcase  " Ignore case when searching lowercase
-
-" Status Line
-" ============================================================================
-" set showcmd
-" set ruler                       " Show ruler
-" match ErrorMsg '\%>78v.\+'
-
 
 " Directories
 " ============================================================================
@@ -91,5 +80,3 @@ set wildmode=list:longest
 " ============================================================================
 set encoding=utf-8
 set fileencoding=utf-8
-
-filetype indent plugin on

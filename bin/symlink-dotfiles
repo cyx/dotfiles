@@ -7,6 +7,7 @@ ln -vfs ~/dotfiles/bash/profile ~/.bash_profile
 # VIM FILES
 ln -vfs ~/dotfiles/vim ~/.vim
 ln -vfs ~/dotfiles/vimrc ~/.vimrc
+ln -vfs ~/dotfiles/gvimrc ~/.gvimrc
 
 # GEMRC
 ln -vfs ~/dotfiles/etc/gemrc ~/.gemrc 
