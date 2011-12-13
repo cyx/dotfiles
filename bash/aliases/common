@@ -2,7 +2,7 @@
 alias e="mvim"
 
 gush() {
-  git push origin $(br)
+  git push -u origin $(br)
 }
 
 gup() {
