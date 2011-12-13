@@ -29,15 +29,10 @@ let maplocalleader = ","
 :noremap <leader>r :! cutest %<CR>
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 :noremap <leader>n :NERDTreeToggle<CR>
+:imap hh <Esc>
 
-:noremap <leader>tt :tabnew<CR>
-:noremap <leader>te :tabedit 
-:noremap <leader>tc :tabclose<CR>
-:noremap <leader>tn :tabnext<CR>
-:noremap <leader>tp :tabprevious<CR>
-:noremap <leader>tf :tabfirst<CR>
-:noremap <leader>tl :tablast<CR>
-:noremap <leader>tm :tabmove<CR>
+:noremap <leader>f :FufFile<CR>
+:noremap <leader>b :FufBuffer<CR>
 
 " Tabs
 " ============================================================================
@@ -49,7 +44,7 @@ set smarttab
 set autoindent
 set textwidth=0
 set showtabline=2
-set laststatus=2
+set laststatus=1
 
 " Searching
 " ============================================================================
