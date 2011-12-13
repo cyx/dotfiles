@@ -1,6 +1,7 @@
 #! /bin/bash
 
 export PS1="\w $ "
+export PATH=/usr/local/bin:$PATH
 
 # RVM
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
