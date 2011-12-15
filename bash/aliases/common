@@ -2,11 +2,16 @@
 alias e="mvim"
 
 gush() {
-  git push -u origin $(br)
+  if [ $(git branch -r | grep $(br)) ]
+  then
+    git push origin $(br)
+  else
+    git push -u origin $(br)
+  fi
 }
 
 gup() {
-  git pull
+  git pull origin $(br)
 }
 
 pg() {
