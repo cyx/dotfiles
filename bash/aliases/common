@@ -2,8 +2,9 @@
 alias e="mvim"
 
 gush() {
-  if [ $(git branch -r | grep $(br)) ]
-  then
+  REMOTE_EXISTS=$(git branch -r | grep $(br))
+
+  if [ -n "$REMOTE_EXISTS" ]; then
     git push origin $(br)
   else
     git push -u origin $(br)
