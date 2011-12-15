@@ -1,20 +1,6 @@
 #!/bin/bash
 alias e="mvim"
 
-gush() {
-  REMOTE_EXISTS=$(git branch -r | grep $(br))
-
-  if [ -n "$REMOTE_EXISTS" ]; then
-    git push origin $(br)
-  else
-    git push -u origin $(br)
-  fi
-}
-
-gup() {
-  git pull origin $(br)
-}
-
 pg() {
   if [ $1 == "start" ]
   then
@@ -22,10 +8,6 @@ pg() {
   else
     pg_ctl -D /usr/local/var/postgres stop -s -m fast
   fi
-}
-
-br() {
-  test -d .git && git symbolic-ref HEAD 2> /dev/null | cut -d/ -f3
 }
 
 ssh-tunnel() {

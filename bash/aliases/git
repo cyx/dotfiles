@@ -1,5 +1,23 @@
 #!/bin/bash
 
+gush() {
+  REMOTE_EXISTS=$(git branch -r | grep $(br))
+
+  if [ -n "$REMOTE_EXISTS" ]; then
+    git push origin $(br)
+  else
+    git push -u origin $(br)
+  fi
+}
+
+gup() {
+  git pull origin $(br)
+}
+
+br() {
+  test -d .git && git symbolic-ref HEAD 2> /dev/null | cut -d/ -f3
+}
+
 # Git
 alias ungit="find . -name '.git' -exec rm -rf {} \;"
 alias gb='git branch'
@@ -8,7 +26,7 @@ alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gpp='git pull && git push'
 # Commit pending changes and quote all args as message
-function gg() { 
+function gg() {
     git commit -v -a -m "$*"
 }
 alias gco='git checkout'
@@ -27,13 +45,13 @@ function gch() {
 }
 
 # Setup a tracking branch from [remote] [branch_name]
-function gbt() { 
-  git branch --track $2 $1/$2 && git checkout $2 
+function gbt() {
+  git branch --track $2 $1/$2 && git checkout $2
 }
 # Quickly clobber a file and checkout
-function grf() { 
+function grf() {
   rm $1
-  git checkout $1 
+  git checkout $1
 }
 # Call from inside an initialized Git repo, with the name of the repo.
 function new-git() {
