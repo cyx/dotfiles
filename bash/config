@@ -1,10 +1,10 @@
 #! /bin/bash
 
 export PS1="\w $ "
-export PATH=/usr/local/bin:$PATH
-
-# RVM
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+export PATH=~/.rbenv/bin:/usr/local/bin:$PATH
 
 # Amazon S3 Configuration
 if [[ -f ~/.amazon_keys ]]; then source ~/.amazon_keys; fi
+
+# Enable rbenv shims and autocompletion
+eval "$(rbenv init -)"
