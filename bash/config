@@ -6,5 +6,8 @@ export PATH=~/.rbenv/bin:/usr/local/bin:$PATH
 # Amazon S3 Configuration
 if [[ -f ~/.amazon_keys ]]; then source ~/.amazon_keys; fi
 
+# Authorize.NET development settings
+if [[ -f ~/.authorize-net ]]; then source ~/.authorize-net; fi
+
 # Enable rbenv shims and autocompletion
 eval "$(rbenv init -)"
