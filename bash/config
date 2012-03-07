@@ -1,7 +1,9 @@
 #! /bin/bash
 
+export PS1="\w $ "
+export PATH=~/.rbenv/bin:~/.dotfiles/bin:/usr/local/bin:$PATH
+
 # App specific secrets
-if [ -e ~/.dg_secret ]; then source ~/.dg_secret; fi
 if [ -e ~/.openredis_secret ]; then source ~/.openredis_secret; fi
 
 # Amazon S3 Configuration

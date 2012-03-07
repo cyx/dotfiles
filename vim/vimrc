@@ -77,3 +77,6 @@ set wildmode=list:longest
 " ============================================================================
 set encoding=utf-8
 set fileencoding=utf-8
+
+set listchars=tab:⏤⇢,trail:⇢
+set list
