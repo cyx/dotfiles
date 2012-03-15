@@ -1,23 +1,5 @@
 #!/bin/bash
 
-function sc() {
-  if [ -f init.rb ];
-  then
-    irb -r./init
-  else
-    ./script/console
-  fi
-}
-
-function ss() {
-  if [ -f init.rb ];
-  then
-    thin start -p 4567
-  else
-    ./script/server
-  fi
-}
-
 function take() {
     mkdir -p "$1"
     cd "$1"
@@ -35,9 +17,6 @@ function zipr() {
 
 # Finder
 alias o='open . &'
-alias ff='open -a Firefox'
-
-# General code
 
 # From Chris Wanstrath
 function pless() {
@@ -61,7 +40,7 @@ function haproxyssh() {
 
 # Syntax check Javascript
 function jsc() {
-  jsl -conf /etc/jsl/jsl.conf -process $1
+  jsl -process $1
 }
 
 function aiff2mp3() {
@@ -70,7 +49,6 @@ function aiff2mp3() {
 function wav2mp3() {
   lame -h -V 0 $1.wav $1.mp3
 }
-
 
 # XCode
 # Analyze release build
@@ -83,55 +61,3 @@ function sxx() {
 }
 
 alias ox="open *.xcodeproj"
-
-# Nginx
-function nginx_stop() {
-    ps ax | grep nginx | cut -d " " -f 1 | xargs sudo kill -9
-}
-function nginx_start() {
-    sudo /opt/nginx/sbin/nginx
-}
-
-# TaskPaper
-function new-tp() {
-    touch $1.taskpaper
-    open $1.taskpaper
-}
-
-
-# From http://github.com/suztomo/dotfiles
-function rmf(){
-    for file in $*
-    do
-        __rm_single_file $file
-    done
-}
-
-function __rm_single_file(){
-    if ! [ -d ~/.Trash/ ]
-    then
-        command /bin/mkdir ~/.Trash
-    fi
-
-    if ! [ $# -eq 1 ]
-    then
-        echo "__rm_single_file: 1 argument required but $# passed."
-        exit
-    fi
-
-    if [ -e $1 ]
-    then
-        BASENAME=`basename $1`
-        NAME=$BASENAME
-        COUNT=0
-        while [ -e ~/.Trash/$NAME ]
-        do
-            COUNT=$(($COUNT+1))
-            NAME="$BASENAME.$COUNT"
-        done
-
-        command /bin/mv $1 ~/.Trash/$NAME
-    else
-        echo "No such file or directory: $file"
-    fi
-}
