@@ -1,7 +1,8 @@
 #! /bin/bash
 
 export PS1="\w $ "
-export PATH=~/.rbenv/bin:~/.dotfiles/bin:/usr/local/bin:$PATH
+export PATH=~/.rbenv/bin:~/.dotfiles/bin:~/go/bin:/usr/local/bin:$PATH
+export GOPATH=~/gocode
 
 # App specific secrets
 if [ -e ~/.openredis_secret ]; then source ~/.openredis_secret; fi
