@@ -6,31 +6,7 @@ alias r="rake"
 # My pretty standard library single-test command.
 alias t="ruby -Ilib:test"
 
-# Run cutest from my edge repository, with a lot of assumptions.
-alias xcutest="RUBYLIB=~/Labs/cutest/lib \
-               ~/Labs/cutest/bin/cutest -r ./test/helper"
-
-# Run the edge monk version as the last priority. This works
-# if there's no `monk` gem found for the current gemset.
-export PATH=$PATH:~/Labs/monk/bin
-
 # Go to a gem.
 function cg() {
-  if [ -d $GEM_HOME/gems ]
-  then
-    cd $GEM_HOME/gems
-
-    if [ -d $GEM_HOME/gems/$1* ]
-    then
-      cd $GEM_HOME/gems/$1*
-    fi
-      
-  else
-    if [ -d /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/$1* ]
-    then 
-      cd /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/$1*
-    else
-      cd /opt/ruby-enterprise/lib/ruby/gems/1.8/gems
-    fi
-  fi
+  cd $(rbenv prefix)/gemsets/$(rbenv gemset active)/gems/$1-*
 }

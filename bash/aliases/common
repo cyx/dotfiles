@@ -1,5 +1,4 @@
 #!/bin/bash
-alias e="mvim"
 
 pg() {
   if [ $1 == "start" ]
@@ -8,14 +7,6 @@ pg() {
   else
     pg_ctl -D /usr/local/var/postgres stop -s -m fast
   fi
-}
-
-ssh-tunnel() {
-  ssh DG-SANDBOX -R :8888:127.0.0.1:9393 sleep 99999
-}
-
-global() {
-  cd $GEM_HOME/../ruby-1.9.2-p0\@global/gems/$@* && vi
 }
 
 # Kudos to djanowski for this. Use ack to search files and open it in
@@ -39,12 +30,6 @@ alias ah="cat ~/dotfiles/bash/aliases/common | \
 
 # Utility
 alias reload="source ~/.bashrc"
-
-# Edit aliases.
-alias ea="mvim -f ~/dotfiles/bash/aliases/common && reload"
-
-# Edit environment vars.
-alias ee="mvim -f ~/dotfiles/bash/env && reload"
 
 # Common commands.
 alias a="ls -A"           # -A all except literal . ..
