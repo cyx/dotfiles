@@ -1,5 +1,17 @@
 #!/bin/bash
 
+_gemset() {
+  if [[ -z $GEM_SET ]]; then
+    echo ""
+  else
+    echo "$GEM_SET "
+  fi
+}
+
+_suspended() {
+  jobs | wc -l | tr -d " "
+}
+
 pg() {
   if [ $1 == "start" ]
   then

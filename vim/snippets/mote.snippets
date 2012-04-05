@@ -280,9 +280,9 @@ snippet spanc
 		${2}
 	</span>${3}
 snippet label
-	<label>
-	  ${1}
-	</label>${2}
+	<label for="${1}">${2}</label>${3}
+snippet labelc
+	<label class="${1}" for="${2}">${3}</label>${4}
 snippet h2
 	<h2>${1}</h2>${2}
 snippet h2c
@@ -301,6 +301,8 @@ snippet b
 	<b>${1}</b>${2}
 snippet em
 	<em>${1}</em>${2}
+snippet button
+	<button type="submit" name="proceed" value="commit">${1}</button>${2}
 snippet $
 	${ ${1} }${2}
 snippet %

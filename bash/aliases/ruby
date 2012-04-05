@@ -5,8 +5,3 @@ alias r="rake"
 
 # My pretty standard library single-test command.
 alias t="ruby -Ilib:test"
-
-# Go to a gem.
-function cg() {
-  cd $(rbenv prefix)/gemsets/$(rbenv gemset active)/gems/$1-*
-}
