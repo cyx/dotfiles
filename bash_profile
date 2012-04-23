@@ -1,4 +1,4 @@
 if [ -f ~/.bashrc ];
-then 
+then
   source ~/.bashrc
 fi

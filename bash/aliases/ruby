@@ -1,7 +1,0 @@
-#! /bin/bash
-
-# Ruby
-alias r="rake"
-
-# My pretty standard library single-test command.
-alias t="ruby -Ilib:test"

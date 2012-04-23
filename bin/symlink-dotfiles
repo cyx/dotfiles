@@ -1,8 +1,8 @@
-#!/bin/bash 
+#!/bin/bash
 
 # BASH PROFILE
 ln -vfs ~/.dotfiles/bashrc ~/.bashrc
-ln -vfs ~/.dotfiles/bash/profile ~/.bash_profile
+ln -vfs ~/.dotfiles/bash_profile ~/.bash_profile
 
 # VIM FILES
 ln -vfs ~/.dotfiles/vim ~/.vim
@@ -10,11 +10,11 @@ ln -vfs ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -vfs ~/.dotfiles/vim/gvimrc ~/.gvimrc
 
 # GEMRC
-ln -vfs ~/.dotfiles/etc/gemrc ~/.gemrc 
-ln -vfs ~/.dotfiles/etc/irbrc ~/.irbrc 
+ln -vfs ~/.dotfiles/etc/gemrc ~/.gemrc
+ln -vfs ~/.dotfiles/etc/irbrc ~/.irbrc
 
 # SCREEN
-ln -vfs ~/.dotfiles/etc/screenrc ~/.screenrc 
+ln -vfs ~/.dotfiles/etc/screenrc ~/.screenrc
 
 # CREATE VIM BACKUP DIR
 mkdir -p ~/.backup/vim/swap
