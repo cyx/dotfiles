@@ -59,8 +59,8 @@ loop do
 
   sleep 1
 
-  changed_file, last_changed = files.find { |file, last_changed|
-    File.mtime(file) > last_changed
+  changed_file, last_changed = files.find { |file, changed|
+    File.mtime(file) > changed
   }
 
   if changed_file
