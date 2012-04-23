@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export EDITOR="vi"
-export PATH=~/.dotfiles/bin:$PATH
-export PS1="\w $ "
-export PATH=~/.rbenv/bin:~/.dotfiles/bin:/usr/local/bin:$PATH
-export NODE_PATH=/usr/local/lib/node_modules
+export RUBY_BREW_PATH=/usr/local/Cellar/ruby/1.9.3-p125/bin
+export PS1='$(_gemset):: \[\033[01;32m\]\w \[\033[00;37m\]$(echo $(br) $(_suspended)) \$\[\033[00m\] '
+export PATH=$RUBY_BREW_PATH:~/.dotfiles/bin:/usr/local/bin:$PATH
+export GOPATH=~/gocode
