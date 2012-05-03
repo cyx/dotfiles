@@ -111,5 +111,5 @@ alias gst='tig status'
 alias g='git status -sb'
 
 function github() {
-  git clone git@github.com/$1.git
+  git clone git@github.com:$1.git
 }
