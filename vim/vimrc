@@ -67,6 +67,7 @@ set directory=~/.backup/vim/swap
 " Change file completion to mimic shell behavior
 set wildmenu
 set wildmode=list:longest
+set wildignore+=*/tmp/*,*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3
 
 " Inser New Line
 " ============================================================================
@@ -80,3 +81,6 @@ set fileencoding=utf-8
 
 set listchars=tab:⏤⇢,trail:⇢
 set list
+
+" Change mapping of CtrlP
+let g:ctrlp_map = '<leader>t'
