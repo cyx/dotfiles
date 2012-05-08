@@ -113,3 +113,10 @@ alias g='git status -sb'
 function github() {
   git clone git@github.com:$1.git
 }
+
+# STEP 1: Run tunnel <hostname>
+# STEP 2: Go to network, SOCKS proxy, and specify localhost 9999
+# STEP 3: BAM, profit :-)
+function tunnel() {
+  ssh -ND 9999 $1
+}
