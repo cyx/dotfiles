@@ -1,3 +1,0 @@
-#!/bin/bash
-
-./script/generate rspec_model $1 $2 $3 $4

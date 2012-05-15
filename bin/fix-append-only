@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-
-src = ARGV[0]
-
-puts File.read(src).
-  gsub("6\r\nzinter", "11\r\nzinterstore").
-  gsub("6\r\nzunion", "11\r\nzunionstore")
-
