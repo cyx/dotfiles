@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 
 export EDITOR="vim"
 export RUBY_BREW_PATH=/usr/local/Cellar/ruby/1.9.3-p194/bin
@@ -119,4 +119,12 @@ function github() {
 # STEP 3: BAM, profit :-)
 function tunnel() {
   ssh -ND 9999 $1
+}
+
+function encrypt-file() {
+  cat "$1" | openssl des3 -salt -pass env:SECRET | openssl base64
+}
+
+function decrypt-file() {
+ cat "$1" | openssl base64 -d | openssl des3 -salt -pass env:SECRET -d
 }
