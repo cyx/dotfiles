@@ -81,5 +81,8 @@ set fileencoding=utf-8
 
 set list listchars=tab:>-,trail:.,extends:>
 
+" Allow backspace to work on aut indents, EOL, or start of lines.
+set backspace=indent,eol,start
+
 " Change mapping of CtrlP
 let g:ctrlp_map = '<leader>t'
