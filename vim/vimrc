@@ -79,8 +79,7 @@ set wildignore+=*/tmp/*,*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3
 set encoding=utf-8
 set fileencoding=utf-8
 
-set listchars=tab:⏤⇢,trail:⇢
-set list
+set list listchars=tab:>-,trail:.,extends:>
 
 " Change mapping of CtrlP
 let g:ctrlp_map = '<leader>t'
