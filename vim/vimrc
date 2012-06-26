@@ -67,7 +67,7 @@ set directory=~/.backup/vim/swap
 " Change file completion to mimic shell behavior
 set wildmenu
 set wildmode=list:longest
-set wildignore+=*/tmp/*,*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3
+set wildignore+=*/tmp/*,*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3,*.pid
 
 " Inser New Line
 " ============================================================================
