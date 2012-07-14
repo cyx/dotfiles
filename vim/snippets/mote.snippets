@@ -196,17 +196,9 @@ snippet textarea
 snippet h
 	{{ ${1:out} }}${2}
 snippet hh
-	<%== ${1:out} %>${2}
+	{{ h(${1:out}) }}${2}
 snippet c
 	% ${1}
-snippet cdn
-	{{ cdn("${1:out}") }}${2}
-snippet cc
-	<!--[if ${1:IE}]>
-		${2}
-	<![endif]-->
-snippet a
-	<a href="${1:url}">${2:text}</a>
 snippet if
 	% if ${1}
 		${2}
@@ -217,6 +209,18 @@ snippet ife
 	% else
 		${3}
 	% end
+snippet each
+	% ${1}.each do |${2}|
+		${3}
+	% end
+snippet cdn
+	{{ cdn("${1:out}") }}${2}
+snippet cc
+	<!--[if ${1:IE}]>
+		${2}
+	<![endif]-->
+snippet a
+	<a href="${1:url}">${2:text}</a>
 snippet secc
 	<section class="${1:name}">
 		${2}
