@@ -171,9 +171,9 @@ snippet h1
 snippet h1c
 	<h1 class="${1:name}">${2}</h1>
 snippet input
-	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="{{ ${3} }}">${4}
+	<input type="${1}" name="${2}" value="${3}">
 snippet link
-	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" charset="utf-8">${4}
+	<link rel="stylesheet" href="${1:/css/main.css}">${3}
 snippet mailto
 	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>${4}
 snippet meta
@@ -187,10 +187,25 @@ snippet select
 		<option value="${3:option}">${4:$3}</option>
 	</select>${5}
 snippet table
-	<table border="${1:0}">
-		<tr><th>${2:Header}</th></tr>
-		<tr><th>${3:Data}</th></tr>
-	</table>${4}
+	<table class="table table-striped table-bordered">
+		${1}
+	</table>
+snippet thead
+	<thead>
+		${1}
+	</thead>
+snippet tbody
+	<tbody>
+		${1}
+	</tbody>
+snippet tr
+	<tr>
+		${1}
+	</tr>
+snippet th
+	<th>${1}</th>${2}
+snippet td
+	<td>${1}</td>${2}
 snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
 snippet h
@@ -300,7 +315,7 @@ snippet h4
 snippet h4c
 	<h4 class="${1:name}">${2}</h4>${3}
 snippet img
-	<img src="{{ cdn("${1}") }}" alt="${2}">${3}
+	<img src="${1}">${2}
 snippet b
 	<b>${1}</b>${2}
 snippet em
@@ -313,3 +328,23 @@ snippet %
 	% ${1}
 	  ${2}
 	% end
+snippet cg
+	<div class="control-group">
+	  <label class="control-label" for="${1}">${2}</label>
+
+		<div class="controls">
+			${3}
+		</div>
+	</div>
+snippet hi
+	<p class="help-inline${1}">
+		${2}
+	</p>${3}
+snippet hb
+	<p class="help-block${1}">
+		${2}
+	</p>${3}
+snippet alert
+	<div class="alert${1}">
+		${2}
+	</div>
