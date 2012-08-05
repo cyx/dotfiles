@@ -7,6 +7,7 @@ export PATH=$RUBY_BREW_PATH:~/.dotfiles/bin:/usr/local/bin:$PATH
 export GREP_OPTIONS="--color=auto"
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
+export NODE_PATH=/usr/local/lib/node_modules
 
 ## app specific secrets
 if [ -e ~/.openredis_secret ]; then source ~/.openredis_secret; fi
@@ -108,6 +109,7 @@ alias gd='git diff'
 alias gdm='git diff master'
 alias gst='tig status'
 alias g='git status -sb'
+alias gpr='git pull --rebase'
 
 function github() {
   git clone git@github.com:$1.git
@@ -118,6 +120,10 @@ function github() {
 # STEP 3: BAM, profit :-)
 function tunnel() {
   ssh -ND 9999 $1
+}
+
+function reversproxy() {
+  ssh $1 -R :9393:127.0.0.1:8080 sleep 99999
 }
 
 function encrypt-file() {
