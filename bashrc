@@ -24,6 +24,9 @@ if [[ -f ~/.malone ]]; then source ~/.malone; fi
 ## mailchimp settings
 if [[ -f ~/.mailchimp ]]; then source ~/.mailchimp; fi
 
+## xend settings
+if [[ -f ~/.xend ]]; then source ~/.xend; fi
+
 # common aliases & functions
 
 _gemset() {
