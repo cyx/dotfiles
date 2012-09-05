@@ -1,7 +1,7 @@
 call pathogen#infect()
 
 syntax on
-colorscheme vividchalk
+colorscheme Tomorrow
 filetype indent plugin on
 
 " Windows
