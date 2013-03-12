@@ -22,7 +22,7 @@ let maplocalleader = ","
 :noremap <leader>h <C-w>h
 :noremap <leader>j <C-w>j
 :noremap <leader>k <C-w>k
-:noremap <leader>- <C-W>_                       
+:noremap <leader>- <C-W>_
 :noremap <leader>N <C-W>n<C-W>_
 :noremap <leader>? <C-W>n<C-W>H<C-W>q
 :noremap <leader>c :only<CR>:tabonly<CR>
@@ -56,7 +56,7 @@ set laststatus=1
 " ============================================================================
 set hlsearch   " highlight search
 set incsearch  " incremental search, search as you type
-set ignorecase " Ignore case when searching 
+set ignorecase " Ignore case when searching
 set smartcase  " Ignore case when searching lowercase
 
 " Directories
@@ -75,7 +75,7 @@ set wildignore+=*/tmp/*,*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3,*.pid
 
 " Inser New Line
 " ============================================================================
-:noremap <S-Enter> O<ESC> 
+:noremap <S-Enter> O<ESC>
 :noremap <Enter> o<ESC>
 
 " Set encodings to UTF8
@@ -83,7 +83,7 @@ set wildignore+=*/tmp/*,*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3,*.pid
 set encoding=utf-8
 set fileencoding=utf-8
 
-set list listchars=tab:>-,trail:.,extends:>
+" set list listchars=tab:>-,trail:.,extends:>
 
 " Allow backspace to work on auto indents, EOL, or start of lines.
 set backspace=indent,eol,start
