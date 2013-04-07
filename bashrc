@@ -1,9 +1,9 @@
 #/bin/bash
 
 export EDITOR="vim"
-export RUBY_BREW_PATH=/usr/local/Cellar/ruby/1.9.3-p374/bin
+export RUBY_BREW_PATH=/usr/local/Cellar/ruby/2.0.0-p0/bin
 export PS1='$(_gemset):: \[\033[01;32m\]\w \[\033[00;37m\]$(echo $(br) $(_suspended)) \$\[\033[00m\] '
-export PATH=$RUBY_BREW_PATH:~/.dotfiles/bin:/opt/local/bin:/usr/local/bin:$PATH
+export PATH=$RUBY_BREW_PATH:~/.dotfiles/bin:/opt/local/bin:$PATH
 export GREP_OPTIONS="--color=auto"
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
@@ -26,6 +26,9 @@ if [[ -f ~/.mailchimp ]]; then source ~/.mailchimp; fi
 
 ## xend settings
 if [[ -f ~/.xend ]]; then source ~/.xend; fi
+
+## golang settings
+if [[ -f ~/.golangconf ]]; then source ~/.golangconf; fi
 
 # common aliases & functions
 
@@ -148,3 +151,6 @@ function vbox-stop() {
 function vbox-save() {
   vboxmanage controlvm "$1" savestate
 }
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
