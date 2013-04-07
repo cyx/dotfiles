@@ -262,8 +262,6 @@ snippet all
 	all? { |${1:e}| ${2} }
 snippet any
 	any? { |${1:e}| ${2} }
-snippet cl
-	classify { |${1:e}| ${2} }
 snippet col
 	collect { |${1:e}| ${2} }
 snippet det
@@ -297,55 +295,13 @@ snippet do
 		${2}
 	end
 snippet :
-	:${1:key} => ${2:"value"}${3}
-snippet ope
-	open(${1:"path/or/url/or/pipe"}, "${2:w}") { |${3:io}| ${4} }
-# path_from_here()
-snippet patfh
-	File.join(File.dirname(__FILE__), *%2[${1:rel path here}])${2}
-# unix_filter {}
-snippet unif
-	ARGF.each_line${1} do |${2:line}|
-		${3}
-	end
-# option_parse {}
-snippet optp
-	require "optparse"
-
-	options = {${1:default => "args"}}
-
-	ARGV.options do |opts|
-		opts.banner = "Usage: #{File.basename($PROGRAM_NAME)}
-snippet opt
-	opts.on( "-${1:o}", "--${2:long-option-name}", ${3:String},
-	         "${4:Option description.}") do |${5:opt}|
-		${6}
-	end
+	${1:key}: ${2:"value"}${3}
 snippet tc
-	require File.expand_path("helper", File.dirname(__FILE__))
+	require File.expand_path("../helper", __FILE__)
 
 	test "${1}" do
 		${2}
 	end
-snippet tst
-	require "stories_helper"
-
-	class ${1}Test < Test::Unit::TestCase
-		story "A ${2} should be able to ${3}" do
-			${4}
-		end
-	end
-snippet tcg
-	require "helper"
-
-	class ${1}Test < Test::Unit::TestCase
-		${2}
-	end
-snippet ts
-	require "test/unit"
-
-	require "tc_${1:test_case_file}"
-	require "tc_${2:test_case_file}"${3}
 snippet as
 	assert ${1:test}
 snippet ase
@@ -357,7 +313,7 @@ snippet asio
 snippet asko
 	assert ${1:object}.kind_of?(${2:Class})${3}
 snippet asn
-	assert nil == ${1:instance}
+	assert_equal nil, ${1:instance}
 snippet asnn
 	assert nil != ${1:instance}
 snippet asm
@@ -365,9 +321,9 @@ snippet asm
 snippet asnm
 	assert(${1:str} !~ /${2:regex}/)${3}
 snippet asr
-	assert_raise(${1:Exception}) { ${2} }
-snippet asnr
-	assert_nothing_raised(${1:Exception}) { ${2} }
+	assert_raise(${1:Exception}) do
+	  ${2}
+	end
 snippet asrt
 	assert ${1:object}.respond_to?(:${2:method})${3}
 snippet fl
@@ -375,36 +331,16 @@ snippet fl
 # Benchmark.bmbm do .. end
 snippet bm-
 	TESTS = ${1:10_000}
+
 	Benchmark.bmbm do |results|
 		${2}
 	end
 snippet rep
-	results.report("${1:name}:") { TESTS.times { ${2} }}
-# Marshal.dump(.., file)
-snippet Md
-	File.open(${1:"path/to/file.dump"}, "wb") { |${2:file}| Marshal.dump(${3:obj}, $2) }${4}
-# Mashal.load(obj)
-snippet Ml
-	File.open(${1:"path/to/file.dump"}, "rb") { |${2:file}| Marshal.load($2) }${3}
-# deep_copy(..)
-snippet deec
-	Marshal.load(Marshal.dump(${1:obj_to_copy}))${2}
-snippet Pn-
-	PStore.new(${1:"file_name.pstore"})${2}
-snippet tra
-	transaction(${1:true}) { ${2} }
-# xmlread(..)
-snippet xml-
-	REXML::Document.new(File.read(${1:"path/to/file"}))${2}
-# xpath(..) { .. }
-snippet xpa
-	elements.each(${1:"//Xpath"}) do |${2:node}|
-		${3}
+	results.report("${1:name}:") do
+	  TESTS.times do
+		  ${2}
+		end
 	end
-# class_from_name()
-snippet clafn
-	split("::").inject(Object) { |par, const| par.const_get(const) }
-# singleton_class()
 snippet sinc
 	class << self; self end
 snippet nam
@@ -422,26 +358,8 @@ snippet ps
 	puts '${1}'${2}
 snippet pd
 	puts "${1}"${2}
-
-# Contest Related 
-snippet des
-	describe "${1:subject}" do
-		${2}
-	end
-snippet con
-	context "${1:event}" do
-		${2}
-	end
-snippet sh
-	should "${1:expectation}" do
-		${2}
-	end
 snippet test
 	test "${1:statement}" do
-		${2}
-	end
-snippet sc
-	scenario "${1:Some scenario}" do
 		${2}
 	end
 snippet setup
@@ -463,3 +381,6 @@ snippet om
 snippet att
 	attribute :${1:attribute}
 	${2}
+snippet call
+	${1:redis}.call("${2:GET}", ${3})
+
