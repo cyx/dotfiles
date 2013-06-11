@@ -20,18 +20,19 @@ snippet ready
 	});
 # Prototype
 snippet proto
-	${1:class_name}.prototype.${2:method_name} =
-	function(${3:first_argument}) {
-		${4:// body...}
+	${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
+	    ${4:// body...}
 	};
 # Function
 snippet fun
-	function ${1:function_name} (${2:argument}) {
-		${3:// body...}
+	function ${1:function_name}(${2:argument}) {
+	    ${3:// body...}
 	}
 # Anonymous Function
 snippet f
-	function(${1}) {${2}};
+	function(${1}) {
+			${2}
+	};
 # if
 snippet if
 	if (${1:true}) {
@@ -46,22 +47,22 @@ snippet ife
 	};
 # tertiary conditional
 snippet t
-	${1:/* condition */} ? ${2:a} : ${3:b}
+	${1:/* condition */} ? ${2:a} : ${3:b};
 # switch
 snippet switch
 	switch(${1:expression}) {
-		case '${3:case}':
-			${4:// code}
-			break;
-		${5}
-		default:
-			${2:// code}
+	    case '${3:case}':
+	        ${4:// code}
+	        break;
+	    ${5}
+	    default:
+	        ${2:// code}
 	}
 # case
 snippet case
 	case '${1:case}':
-		${2:// code}
-		break;
+	    ${2:// code}
+	    break;
 	${3}
 # for (...) {...}
 snippet for
