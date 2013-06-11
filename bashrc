@@ -104,7 +104,7 @@ gup() {
 }
 
 br() {
-  test -d .git && git symbolic-ref HEAD 2> /dev/null | cut -d/ -f3
+  test -d .git && git symbolic-ref HEAD 2> /dev/null | sed 's/refs\/heads\///'
 }
 
 alias gc='git commit -v'
