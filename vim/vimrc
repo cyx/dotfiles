@@ -28,7 +28,7 @@ let maplocalleader = ","
 :noremap <leader>c :only<CR>:tabonly<CR>
 :noremap J <Esc><C-w>j<C-w>_
 :noremap K <Esc><C-w>k<C-w>_
-:noremap <leader>r :! cutest %<CR>
+:noremap <leader>r :! make test/%<CR>
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 :noremap <leader>n :NERDTreeToggle<CR>
 
