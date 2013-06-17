@@ -1,124 +1,89 @@
 " Vim color file
-"
-" Author: Anthony Carapetis <anthony.carapetis@gmail.com>
-"
-" Note: Based on github's syntax highlighting theme
-"       Used Brian Mock's darkspectrum as a starting point/template
-"       Thanks to Ryan Heath for an easy list of some of the colours:
-"       http://rpheath.com/posts/356-github-theme-for-syntax-gem
+" Maintainer: Ricardo Valeriano <ricardo.valeriano@gmail.com>
+"     Based on the work by: Bruno Michel <bmichel@menfin.info>
+" Last Change: Mar, 01, 2012
+" Version: 0.2
+" Homepage: http://github.com/ricardovaleriano/vim-github-theme
 
-hi clear
+" This is a ViM's version of the github color theme.
 
 set background=light
-
-if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
-    hi clear
-    if exists("syntax_on")
-      syntax reset
-    endif
+hi clear
+if exists("syntax_on")
+    syntax reset
 endif
 
-let g:colors_name="github"
+let g:colors_name = "github"
+set t_Co=256
 
-hi Normal           guifg=#000000 guibg=#F8F8FF
+hi Comment              guifg=#999988 ctermfg=102 gui=italic
 
-" Cursor
-hi Cursor           guifg=#F8F8FF guibg=#000000 
-hi CursorLine                     guibg=#D8D8DD
-hi CursorColumn                   guibg=#E8E8EE
+hi Constant             guifg=#008080 ctermfg=30
+    hi String           guifg=#dd1144 ctermfg=161
+    hi Character        guifg=#dd1144 ctermfg=161
+    hi Number           guifg=#009999 ctermfg=30
+    hi Boolean          gui=bold cterm=bold
+    hi Float            guifg=#009999 ctermfg=30
+    hi RubySymbol       guifg=#990073 ctermfg=90
 
-" Diff
-hi DiffAdd          guifg=#003300 guibg=#DDFFDD gui=none
-hi DiffChange                     guibg=#ECECEC gui=none
-hi DiffText         guifg=#000033 guibg=#DDDDFF gui=none
-hi DiffDelete       guifg=#DDCCCC guibg=#FFDDDD gui=none
+hi Identifier           guifg=#008080 ctermfg=30
+    hi Function         guifg=#990000 ctermfg=88 gui=bold cterm=bold
 
-" Folding / Line Numbering / Status Lines
-hi Folded           guibg=#ECECEC guifg=#808080 gui=bold
-hi vimFold          guibg=#ECECEC guifg=#808080 gui=bold
-hi FoldColumn       guibg=#ECECEC guifg=#808080 gui=bold
+hi Statement            guifg=#000000 ctermfg=16 gui=bold cterm=bold
+    hi Conditional      guifg=#000000 ctermfg=16 gui=bold cterm=bold
+    hi Repeat           guifg=#000000 ctermfg=16 gui=bold cterm=bold
+    hi Label            guifg=#000000 ctermfg=16 gui=bold cterm=bold
+    hi Operator         guifg=#000000 ctermfg=16 gui=bold cterm=bold
+    hi Keyword          guifg=#000000 ctermfg=16 gui=bold cterm=bold
+    hi Exception        guifg=#990000 ctermfg=88 gui=bold cterm=bold
 
-hi LineNr           guifg=#A0A0A0 guibg=#ECECEC
-hi NonText          guifg=#808080 guibg=#F8F8FF
-hi Folded           guifg=#808080 guibg=#ECECEC gui=bold
-hi FoldeColumn      guifg=#808080 guibg=#ECECEC gui=bold
+hi PreProc              guifg=#999999 ctermfg=102 gui=bold cterm=bold
+    hi Include          guifg=#999999 ctermfg=102 gui=bold cterm=bold
+    hi Define           guifg=#000000 ctermfg=16 gui=bold cterm=bold
+    hi Macro            guifg=#999999 ctermfg=102 gui=bold cterm=bold
+    hi PreCondit        guifg=#999999 ctermfg=102 gui=bold cterm=bold
 
-hi VertSplit        guifg=#DDDDDD guibg=#DDDDDD gui=none
-hi StatusLine       guifg=#404040 guibg=#DDDDDD gui=bold
-hi StatusLineNC     guifg=#404040 guibg=#DDDDDD gui=italic
+hi Type                 guifg=#445588 ctermfg=60 gui=bold cterm=bold
+    hi StorageClass     guifg=#000000 ctermfg=16 gui=bold cterm=bold
+    hi Structure        guifg=#000000 ctermfg=16 gui=bold cterm=bold
+    hi Typedef          guifg=#000000 ctermfg=16 gui=bold cterm=bold
 
-" Misc
-hi ModeMsg          guifg=#990000
-hi MoreMsg          guifg=#990000
+hi Special              guifg=#dd1144 ctermfg=161
+    hi SpecialChar      guifg=#dd1144 ctermfg=161
+    hi Tag              guifg=#000080 ctermfg=18
+    hi Delimiter        guifg=#dd1144 ctermfg=161
+    hi SpecialComment   guifg=#999999 ctermfg=102 gui=bold,italic cterm=bold,italic
+    hi Debug            guifg=#aa0000 ctermfg=124
 
-hi Title            guifg=#ef5939
-hi WarningMsg       guifg=#ef5939
-hi SpecialKey       guifg=#177F80               gui=italic
+hi Underlined           gui=underline cterm=underline
 
-hi MatchParen       guifg=#000000 guibg=#CDCDFD
-hi Underlined       guifg=#000000               gui=underline
-hi Directory        guifg=#990000
+hi Ignore               guifg=bg
 
-" Search, Visual, etc
-hi Visual           guifg=#FFFFFF guibg=#3465A4 gui=none
-hi VisualNOS        guifg=#FFFFFF guibg=#204A87 gui=none
-hi IncSearch        guifg=#000000 guibg=#CDCDFD gui=italic
-hi Search           guifg=#000000 guibg=#CDCDFD gui=italic
+hi Error                guifg=#a61717 ctermfg=124 guibg=#e3d2d2 ctermbg=188
 
-" Syntax groups
-hi Ignore           guifg=#808080
-hi Identifier       guifg=#0086B3
-hi PreProc          guifg=#000000               gui=bold
-hi Comment          guifg=#999988               gui=italic
-hi Constant         guifg=#177F80               gui=none
-hi String           guifg=#D81745 
-hi Function         guifg=#990000               gui=bold
-hi Statement                                    gui=bold
-hi Type             guifg=#445588               gui=bold
-hi Number           guifg=#1C9898
-hi Todo             guifg=#FFFFFF guibg=#990000 gui=bold
-hi Special          guifg=#159828
-hi rubySymbol       guifg=#960B73
-hi Error            guibg=#F8F8FF guifg=#FF1100 gui=undercurl
-hi Todo             guibg=#F8F8FF guifg=#FF1100 gui=underline
+hi Todo                 guifg=#999988 ctermfg=102 gui=italic cterm=italic
 
-" Completion menus
-hi WildMenu         guifg=#7fbdff guibg=#425c78 gui=none
-hi Pmenu            guifg=#FFFFFF guibg=#808080 gui=bold
-hi PmenuSel         guifg=#000000 guibg=#CDCDFD gui=italic
-hi PmenuSbar        guifg=#444444 guibg=#000000 
-hi PmenuThumb       guifg=#AAAAAA guibg=#AAAAAA 
+hi Cursor               guifg=NONE ctermfg=NONE guibg=#ff9900 ctermbg=227
+hi CursorLine           guifg=NONE ctermfg=NONE guibg=#ffffcc ctermbg=230
+hi Directory            guifg=#4183c4 ctermfg=68
+hi DiffAdd              guifg=#000000 ctermfg=16 guibg=#ddffdd ctermbg=194
+hi DiffDelete           guifg=#000000 ctermfg=16 guibg=#ffdddd ctermbg=224
+hi DiffText             guibg=#666666 ctermbg=59
+hi ErrorMsg             guifg=#a61717 ctermfg=124 guibg=#e3d2d2 ctermbg=188 gui=bold cterm=bold
+hi VertSplit            guifg=#666666 ctermfg=59 guibg=#eaeaea ctermbg=188
+hi LineNr               guifg=#666666 ctermfg=59 guibg=#eaeaea ctermbg=188
+hi ModeMsg              gui=bold cterm=bold
+hi Normal               guifg=#000000 ctermfg=16 guibg=#f8f8ff ctermbg=231
+hi Pmenu                guibg=#babdb6 ctermbg=145 guifg=#555753 ctermfg=59
+hi StatusLine           guifg=#666666 ctermfg=59 guibg=#eaeaea ctermbg=188
+hi Visual               guifg=NONE ctermfg=NONE guibg=#ffffcc ctermbg=230
 
-" Tabs
-hi TabLine          guifg=#404040 guibg=#DDDDDD gui=none
-hi TabLineFill      guifg=#404040 guibg=#DDDDDD gui=none
-hi TabLineSel       guifg=#404040               gui=bold
+"this is a workaround to show the cursor on the Terminal.app
+"thanks to: http://www.damtp.cam.ac.uk/user/rbw/vim-osx-cursor.html
+if $TERM_PROGRAM == "Apple_Terminal" && !has("gui_running")
+  hi CursorLine term=none cterm=none "Invisible CursorLine
+  hi Cursor     ctermfg=none ctermbg=85
 
-" Spelling
-hi spellBad         guisp=#FCAF3E
-hi spellCap         guisp=#73D216
-hi spellRare        guisp=#FCAF3E
-hi spellLocal       guisp=#729FCF
-
-" Aliases
-hi link cppSTL                Function
-hi link cppSTLType            Type
-hi link Character             Number
-hi link htmlTag               htmlEndTag
-"hi link htmlTagName          htmlTag
-hi link htmlLink              Underlined
-hi link pythonFunction        Identifier
-hi link Question              Type
-hi link CursorIM              Cursor
-hi link VisualNOS             Visual
-hi link xmlTag                Identifier
-hi link xmlTagName            Identifier
-hi link shDeref               Identifier
-hi link shVariable            Function
-hi link rubySharpBang         Special
-hi link perlSharpBang         Special
-hi link schemeFunc            Statement
-"hi link shSpecialVariables   Constant
-"hi link bashSpecialVariables Constant
+  set cursorline
+  match Cursor /\%#/
+endif
