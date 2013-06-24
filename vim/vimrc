@@ -1,7 +1,7 @@
 call pathogen#infect()
 
 syntax on
-colorscheme github
+colorscheme resistor
 filetype indent plugin on
 
 " Windows
@@ -29,7 +29,7 @@ let maplocalleader = ","
 :noremap J <Esc><C-w>j<C-w>_
 :noremap K <Esc><C-w>k<C-w>_
 :noremap <leader>r :! make test/%<CR>
-:noremap <leader>R :! deaccessor.py < % > %.temp && jslint --es5 --node --vars --forin --nomen --color --maxlen 80 --indent 4 %.temp; rm -f %.temp<CR>
+:noremap <leader>R :! deaccessor.py < % > %.temp && jslint --es5 --node --vars --forin --nomen --color --undef --sloppy --maxlen 80 --indent 4 %.temp; rm -f %.temp<CR>
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 :noremap <leader>n :NERDTreeToggle<CR>
 
