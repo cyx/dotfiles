@@ -41,6 +41,10 @@ let maplocalleader = ","
 :noremap <leader>gup :!git pull<CR>
 :noremap <leader>gush :!git push<CR>
 
+:noremap <C-c> <ESC>
+:noremap <C-w><C-c> <ESC>
+:noremap <C-w>c <ESC>
+
 " Tabs
 " ============================================================================
 set expandtab
