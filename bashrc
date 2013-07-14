@@ -1,7 +1,7 @@
 #/bin/bash
 
 export EDITOR="vim"
-export RUBY_BREW_PATH=/usr/local/Cellar/ruby/2.0.0-p0/bin
+export RUBY_BREW_PATH=/usr/local/Cellar/ruby/2.0.0-p247/bin
 export PS1='$(_gemset):: \[\033[32m\]\w \[\033[00;34m\]$(echo $(br) $(_suspended)) \$\[\033[00m\] '
 export PATH=$RUBY_BREW_PATH:~/.dotfiles/bin:./node_modules/.bin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:$PATH
 export GREP_OPTIONS="--color=auto"
