@@ -2,8 +2,8 @@ Dotfiles FTW
 ============
 
     cd ~/
-    git clone git://github.com/cyx/dotfiles.git
-    ~/dotfiles/bin/symlink-dotfiles
+    git clone git://github.com/cyx/dotfiles.git .dotfiles
+    ~/.dotfiles/bin/symlink-dotfiles
 
     # You're done!
 
