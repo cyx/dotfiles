@@ -3,7 +3,8 @@ Dotfiles FTW
 
     cd ~/
     git clone git://github.com/cyx/dotfiles.git
-    ~/dotfiles/bin/symlink-dotfiles
+    mv dotfiles .dotfiles
+    ~/.dotfiles/bin/symlink-dotfiles
 
     # You're done!
 
