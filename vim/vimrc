@@ -33,8 +33,7 @@ let maplocalleader = ","
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 :noremap <leader>n :NERDTreeToggle<CR>
 
-:noremap <leader>f :FufFile<CR>
-:noremap <leader>b :FufBuffer<CR>
+:noremap <leader>b :CtrlPBuffer<CR>
 
 :noremap <leader>gst :!tig status<CR>
 :noremap <leader>gpr :!git pull --rebase<CR>
@@ -95,3 +94,4 @@ set backspace=indent,eol,start
 
 " Change mapping of CtrlP
 let g:ctrlp_map = '<leader>t'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
