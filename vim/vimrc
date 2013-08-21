@@ -28,8 +28,8 @@ let maplocalleader = ","
 :noremap <leader>c :only<CR>:tabonly<CR>
 :noremap J <Esc><C-w>j<C-w>_
 :noremap K <Esc><C-w>k<C-w>_
-:noremap <leader>r :! make %<CR>
-:noremap <leader>R :! jshint %<CR>
+:noremap <leader>r :! clear; make %<CR>
+:noremap <leader>R :! clear; jshint %<CR>
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 :noremap <leader>n :NERDTreeToggle<CR>
 
@@ -58,7 +58,7 @@ set laststatus=1
 
 " Searching
 " ============================================================================
-set hlsearch   " highlight search
+set nohlsearch " highlight search
 set incsearch  " incremental search, search as you type
 set ignorecase " Ignore case when searching
 set smartcase  " Ignore case when searching lowercase
