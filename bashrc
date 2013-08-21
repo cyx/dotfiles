@@ -55,8 +55,8 @@ pg() {
 
 ## Kudos to djanowski for this. Use ack to search files and open it in
 ## `vi` with the searched text as the last searched phrase in vi.
-vack() {
-  vi -p -c "/$1" $(ack -al $@)
+vag() {
+  vi -p -c "/$1" $(ag -l $@)
 }
 
 ## Search all files by default. This fixes the problem that *.css, *.less,
