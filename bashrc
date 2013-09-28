@@ -2,7 +2,7 @@
 
 export EDITOR="vim"
 export RUBY_BREW_PATH=/usr/local/Cellar/ruby/2.0.0-p247/bin
-export PS1='$ '
+export PS1='\[\033[01;32m\]$\[\033[00m\] '
 export PATH=$RUBY_BREW_PATH:~/.dotfiles/bin:./node_modules/.bin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:$PATH
 export GREP_OPTIONS="--color=auto"
 export LANG="en_US.UTF-8"
