@@ -17,7 +17,7 @@ encoding UTF-8
 activity "Activity in window %n %t at %c"
 
 # This will show the titles and locations of all screen windows.
-hardstatus alwayslastline "%{KW} %-w%{Wr} %n %t %{KW}%+w %=%l"
+hardstatus alwayslastline "%{KW} %-w%{WB} %n %t %{KW}%+w %=%l"
 
 # Increase the scroll size.
 defscrollback 3000
