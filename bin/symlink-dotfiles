@@ -16,5 +16,9 @@ ln -vfs ~/.dotfiles/etc/irbrc ~/.irbrc
 # SCREEN
 ln -vfs ~/.dotfiles/etc/screenrc ~/.screenrc
 
+# GIT
+ln -vfs ~/.dotfiles/git/.gitconfig ~/.gitconfig
+ln -vfs ~/.dotfiles/git/.gitignore ~/.gitignore
+
 # CREATE VIM BACKUP DIR
 mkdir -p ~/.backup/vim/swap

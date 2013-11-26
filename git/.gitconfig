@@ -1,0 +1,13 @@
+[user]
+  name = Cyril David
+  email = cyx@cyx.is
+
+[core]
+  excludesfile = ~/.gitignore
+
+[color]
+  ui = true
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
