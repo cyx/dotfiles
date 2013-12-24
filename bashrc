@@ -43,14 +43,4 @@ function decrypt-file() {
   cat "$1" | openssl base64 -d | openssl des3 -salt -pass env:SECRET -d
 }
 
-function vbox-start() {
-  vboxmanage startvm "$1" --type headless
-}
-
-function vbox-stop() {
-  vboxmanage controlvm "$1" poweroff
-}
-
-function vbox-save() {
-  vboxmanage controlvm "$1" savestate
-}
+source ~/.ssh-agent
