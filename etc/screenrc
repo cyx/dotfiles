@@ -21,11 +21,3 @@ hardstatus alwayslastline "%{KW} %-w%{WB} %n %t %{KW}%+w %=%l"
 
 # Increase the scroll size.
 defscrollback 3000
-
-# Copy to clipboard.
-bind b eval "writebuf /tmp/screen-pbcopy" "exec bash -c '/usr/bin/pbcopy < /tmp/screen-pbcopy'"
-
-screen -t server 0
-screen -t vi 1
-screen -t test 2
-screen -t irb 3
