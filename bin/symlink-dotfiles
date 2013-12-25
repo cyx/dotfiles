@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# BASH
+ln -vfs ~/.dotfiles/bashrc ~/.bashrc
+ln -vfs ~/.dotfiles/bash_profile ~/.bash_profile
+
+# SSH
+ln -vfs ~/.dotfiles/ssh-agent ~/.ssh-agent
+
 # VIM FILES
 ln -vfs ~/.dotfiles/vim ~/.vim
 ln -vfs ~/.dotfiles/vim/vimrc ~/.vimrc
