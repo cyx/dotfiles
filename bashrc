@@ -5,6 +5,7 @@ export PS1='# '
 export GREP_OPTIONS="--color=auto"
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
+export PATH=/opt/bin:$PATH:~/.dotfiles/bin
 
 ## Kudos to djanowski for this. Use ack to search files and open it in
 ## `vi` with the searched text as the last searched phrase in vi.
