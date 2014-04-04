@@ -1,7 +1,6 @@
 call pathogen#infect()
 
 syntax on
-colorscheme xoria256
 filetype indent plugin on
 
 " Windows
