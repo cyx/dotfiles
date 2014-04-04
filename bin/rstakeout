@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby -w
+#!/usr/local/bin/ruby
 
 ##
 # Originally by Mike Clark.
