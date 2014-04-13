@@ -51,10 +51,7 @@ function suspend() {
     org.freedesktop.UPower.Suspend
 }
 
-source ~/.ssh-agent
-
 # Linux pbcopy / pbpaste conveniences
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
-
 alias node='node --harmony'
