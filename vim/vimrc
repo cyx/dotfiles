@@ -3,6 +3,14 @@ call pathogen#infect()
 syntax on
 filetype indent plugin on
 
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 " Windows
 " ============================================================================
 set splitbelow splitright
@@ -69,17 +77,10 @@ set wildmenu
 set wildmode=list:longest
 set wildignore+=*/tmp/*,*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3,*.pid
 
-" Inser New Line
-" ============================================================================
-:noremap <S-Enter> O<ESC>
-:noremap <Enter> o<ESC>
-
 " Set encodings to UTF8
 " ============================================================================
 set encoding=utf-8
 set fileencoding=utf-8
-
-" set list listchars=tab:>-,trail:.,extends:>
 
 " Allow backspace to work on auto indents, EOL, or start of lines.
 set backspace=indent,eol,start
