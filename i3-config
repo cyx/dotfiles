@@ -151,9 +151,5 @@ bar {
 
 exec "setxkbmap -option ctrl:nocaps"
 exec "synclient TouchpadOff=1"
-exec "feh --bg-fill /usr/share/backgrounds/Beach_by_Renato_Giordanelli.jpg"
 
 bindsym $mod+g exec google-chrome
-bindsym $mod+c exec "xdotool click 1"
-bindsym $mod+f exec "xdotool click --repeat 2 1"
-bindsym $mod+r exec "xdotool click 3"
