@@ -15,8 +15,10 @@ vag() {
 
 ## Search all files by default. This fixes the problem that *.css, *.less,
 ## *.sass files aren't usually seacrched.
-alias ack="ack -a"
 alias ag="ag -a"
+
+## No need to specify vim (it's annoying)
+alias vi="vim"
 
 function take() {
     mkdir -p "$1"
@@ -44,16 +46,8 @@ function decrypt-file() {
   cat "$1" | openssl base64 -d | openssl des3 -salt -pass env:SECRET -d
 }
 
-function suspend() {
-  dbus-send --system --print-reply \
-    --dest="org.freedesktop.UPower" \
-    /org/freedesktop/UPower \
-    org.freedesktop.UPower.Suspend
-}
-
 # Linux pbcopy / pbpaste conveniences
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
-alias node='node --harmony'
 
 source ~/.dotfiles/ssh-agent
