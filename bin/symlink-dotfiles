@@ -1,11 +1,10 @@
 #!/bin/bash
 
 # BASH
-ln -vfs ~/.dotfiles/bashrc ~/.bashrc
-ln -vfs ~/.dotfiles/bash_profile ~/.bash_profile
 
-# SSH
-ln -vfs ~/.dotfiles/ssh-agent ~/.ssh-agent
+grep "dotfiles" ~/.bashrc || (
+	echo "source ~/.dotfiles/bashrc" >> ~/.bashrc
+)
 
 # VIM FILES
 ln -vfs ~/.dotfiles/vim ~/.vim
