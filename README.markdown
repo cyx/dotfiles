@@ -10,11 +10,12 @@ Dotfiles FTW
 Assupmtions
 -----------
 
-The configuration assumes that you have the binary executable `mvim` somewhere in your path.
-
-This is also adds /opt/ruby-enterprise/bin to your path, and also adds lots of conveniences for git.
+- That you already have a `bash_profile` which `source`s
+  your `.bashrc`.
+- You're using vim (not basic vi).
+- Your default shell is bash
 
 Credits
 -------
 
-Most of the credits would go to http://peepcode.com/products/advanced-command-line. 
+Most of the credits would go to http://peepcode.com/products/advanced-command-line.
