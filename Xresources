@@ -1,5 +1,7 @@
-xterm*faceName: Monaco
-xterm*faceSize: 18
+xterm*faceName: Droid Sans Mono
+xterm*faceSize: 22
+xterm*colorBDMode: true
+xterm*colorULMode: true
 xterm*loginShell: true
 xterm*vt100*geometry: 80x32
 xterm*saveLines: 4096
@@ -10,4 +12,4 @@ xterm*metaSendsEscape: true
 xterm*selectToClipboard: true
 xterm*reverseVideo: on
 xterm*borderWidth: 0
-xterm*scaleHeight: 1.01
+xterm*scaleHeight: 1.05
