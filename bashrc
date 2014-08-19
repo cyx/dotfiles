@@ -1,7 +1,6 @@
 #/bin/bash
 
 export EDITOR="vim"
-export PS1='\[\e[1;32m\][\h] \W \$\[\e[0m\] '
 export GREP_OPTIONS="--color=auto"
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"

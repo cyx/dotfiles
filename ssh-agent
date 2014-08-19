@@ -7,6 +7,7 @@ function start_agent {
      chmod 600 "${SSH_ENV}"
      . "${SSH_ENV}" > /dev/null
      /usr/bin/ssh-add;
+     echo "PATH=$PATH" >> ~/.ssh/environment
 }
 
 # Source SSH settings, if applicable
