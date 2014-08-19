@@ -46,6 +46,42 @@ function decrypt-file() {
   cat "$1" | openssl base64 -d | openssl des3 -salt -pass env:SECRET -d
 }
 
+function tcrypt-open() {
+  if [ $# -ne 2 ]
+  then
+    echo "Usage: tcrypt-open <file> <name>"
+    return 1
+  fi
+
+  file=$1
+  name=$2
+
+
+  echo "sudo cryptsetup --type tcrypt open $file $name"
+  sudo cryptsetup --type tcrypt open $file $name
+
+  sudo mkdir /mnt/$name
+
+  echo "sudo mount /dev/mapper/$name /mnt/$name"
+  sudo mount /dev/mapper/$name /mnt/$name
+}
+
+function tcrypt-close() {
+  if [ $# -ne 1 ]
+  then
+    echo "Usage: tcrypt-close <name>"
+    return 1
+  fi
+
+  name=$1
+
+  echo "sudo cryptsetup close $name"
+  sudo cryptsetup close $name
+
+  echo "sudo umount /mnt/$name"
+  sudo "umount /mnt/$name"
+}
+
 # Linux pbcopy / pbpaste conveniences
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
