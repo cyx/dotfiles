@@ -1,0 +1,7 @@
+This patch for ath9k_htc is for the tp link wifi USB
+dongle in conjunction with linux kernel 3.15 / 3.16.
+
+More information can be found here:
+
+    https://bbs.archlinux.org/viewtopic.php?pid=1428106
+
