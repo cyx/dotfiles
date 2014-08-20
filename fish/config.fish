@@ -7,5 +7,3 @@ alias ag="ag -a"
 alias k9="killall -9"
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
-
-~/.dotfiles/ssh-agent
