@@ -1,6 +1,5 @@
-Config { font = "xft:Droid Sans:size=10:antialias=true"
-, bgColor = "black"
-, fgColor = "grey"
+Config { bgColor = "black"
+, fgColor = "white"
 , position = Top
 , lowerOnStart = True
 , commands = [ Run Weather "KLAS" ["-t","Las Vegas: <tempF>°F","-L","18","-H","25","--normal","green","--high","red","--low","lightblue"] 36000
@@ -12,6 +11,6 @@ Config { font = "xft:Droid Sans:size=10:antialias=true"
              ]
 , sepChar = "%"
 , alignSep = "}{"
-, template = "%cpu%    %memory%    %wlp3s0% }{ %battery%    %KLAS%    <fc=#ee9a00>%date%</fc>"
+, template = "%cpu%  %memory%  %wlp3s0% }{ %battery%  %KLAS%  <fc=#ee9a00>%date%</fc>"
 }
 
