@@ -1,4 +1,4 @@
 #!/bin/bash
 
 xrandr --output DP-1 --auto --output LVDS-1 --off
-feh --bg-center ~/Documents/Pictures/Star\ River.jpg
+feh --bg-center ~/docs/pics/Star\ River.jpg
