@@ -1,3 +1,0 @@
-#!/bin/bash
-
-clean-whitespace "**/**" "db/**/**" "vendor/**/**" "log/**/**" "tmp/**/**" "public/*/*.mp3" "test/fixtures/files/*"
