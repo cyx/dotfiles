@@ -5,7 +5,10 @@ xsetroot -cursor_name left_ptr
 setxkbmap -layout dvorak -option ctrl:nocaps
 
 xrdb ~/.Xresources
-feh --bg-center ~/Documents/Pictures/Star\ River.jpg
+feh --bg-fill ~/docs/pics/japan/kanji.jpg
+
+# disable the annoying touchpad :-p
+synclient TouchpadOff=1
 
 # our pretty little status bar
 xmobar &
