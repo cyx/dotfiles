@@ -9,6 +9,7 @@ if expr (count $PATH) '=' 1 > /dev/null
 	set -g -x PATH /opt/bin /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin ~/.dotfiles/bin
 end
 
+alias startx="ssh-agent startx"
 alias vi="vim"
 alias ag="ag -a"
 alias k9="killall -9"
