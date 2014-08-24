@@ -1,4 +1,4 @@
 #!/bin/bash
 
 xrandr --output LVDS-1 --auto --output DP-1 --off
-feh --bg-center ~/docs/pics/Star\ River.jpg
+feh --bg-fill ~/docs/pics/japan/kanji.jpg
