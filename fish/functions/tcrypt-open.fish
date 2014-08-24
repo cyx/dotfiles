@@ -1,5 +1,5 @@
 function tcrypt-open --description 'open a truecrypt volume using cryptsetup'
-	if set -q argv
+	if set -q $argv
     		echo "Usage: tcrypt-open <file> <name>"
     		return 1
 	end

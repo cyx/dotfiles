@@ -1,5 +1,5 @@
 function tcrypt-close --description 'close an previously opened truecrypt volume'
-	if set -q argv
+	if set -q $argv
 		echo "Usage: tcrypt-close <name>"
 		return 1
 	end
