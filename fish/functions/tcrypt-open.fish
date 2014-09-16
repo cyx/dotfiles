@@ -10,7 +10,7 @@ function tcrypt-open --description 'open a truecrypt volume using cryptsetup'
 	echo "sudo cryptsetup --type tcrypt open $file $name"
 	sudo cryptsetup --type tcrypt open $file $name
 
-	sudo mkdir /mnt/$name
+	sudo mkdir -p /mnt/$name
 
 	echo "sudo mount /dev/mapper/$name /mnt/$name"
 	sudo mount /dev/mapper/$name /mnt/$name

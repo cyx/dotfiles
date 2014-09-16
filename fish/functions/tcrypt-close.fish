@@ -10,5 +10,5 @@ function tcrypt-close --description 'close an previously opened truecrypt volume
 	sudo cryptsetup close $name
 
 	echo "sudo umount /mnt/$name"
-	sudo "umount /mnt/$name"
+	sudo umount /mnt/$name
 end
