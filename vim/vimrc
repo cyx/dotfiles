@@ -35,18 +35,10 @@ let maplocalleader = ","
 :noremap <leader>N <C-W>n<C-W>_
 :noremap <leader>? <C-W>n<C-W>H<C-W>q
 :noremap <leader>c :only<CR>:tabonly<CR>
-:noremap <leader>r :! clear; make %<CR>
-:noremap <leader>a :! clear; make test<CR>
-:noremap <leader>R :! clear; jshint %<CR>
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 :noremap <leader>n :NERDTreeToggle<CR>
 
 :noremap <leader>b :CtrlPBuffer<CR>
-
-:noremap <leader>gst :!tig status<CR>
-:noremap <leader>gpr :!git pull --rebase<CR>
-:noremap <leader>gup :!git pull<CR>
-:noremap <leader>gush :!git push<CR>
 
 :noremap <C-c> <ESC>
 :noremap <C-w><C-c> <ESC>
