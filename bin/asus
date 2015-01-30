@@ -1,4 +1,0 @@
-#!/bin/bash
-
-xrandr --output DP-1 --auto --output LVDS-1 --off
-feh --bg-fill ~/docs/pics/japan/kanji.jpg
