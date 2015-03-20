@@ -1,9 +1,0 @@
-#!/usr/bin/env rc
-
-now  = `{ cat /sys/class/power_supply/BAT0/energy_now }
-full = `{ cat /sys/class/power_supply/BAT0/energy_full }
-
-_ = `{ expr $now '*' 100 }
-percent = `{ expr $_ '/' $full }
-
-printf '%d\n' $percent
