@@ -4,6 +4,7 @@
 export EDITOR=vim
 export PATH=/opt/bin:$PATH:~/.dotfiles/bin
 export PS1='$ '
+export CHROMIUM_FLAGS="--disable-hang-monitor"
 
 ## Heroku toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
