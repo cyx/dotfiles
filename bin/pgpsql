@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'uri'
+
+uri = URI.parse(ARGV[0])
+
+exec("PGPASSWORD=%s psql -U %s -h %s -d %s -p %s" % [
+	uri.password,
+	uri.user,
+	uri.host,
+	uri.path[1..-1],
+	uri.port])
