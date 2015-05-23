@@ -1,0 +1,3 @@
+#!/bin/bash
+
+greenisland --fake-screen ~/.config/fake-screen.json --shell io.papyros.shell
