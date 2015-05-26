@@ -14,8 +14,6 @@ xterm*reverseVideo: off
 xterm*borderWidth: 0
 xterm*scaleHeight: 1.05
 XTerm*termName: xterm-256color
-xterm*on2Clicks: regex [^:/@ \n]+
-xterm*on3Clicks: regex [^ \n]+
 
 ! Default to dark background if neither constant is defined, or if both are.
 #if !defined(SOLARIZED_LIGHT) && !defined(SOLARIZED_DARK)
