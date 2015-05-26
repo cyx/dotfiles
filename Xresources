@@ -1,5 +1,5 @@
-xterm*faceName: Droid Sans Mono
-xterm*faceSize: 22
+xterm*faceName: Inconsolata
+xterm*faceSize: 28
 xterm*colorBDMode: true
 xterm*colorULMode: true
 xterm*loginShell: true
@@ -12,5 +12,5 @@ xterm*metaSendsEscape: true
 xterm*selectToClipboard: true
 xterm*reverseVideo: off
 xterm*borderWidth: 0
-xterm*scaleHeight: 1.05
+xterm*scaleHeight: 1.15
 XTerm*termName: xterm-256color
