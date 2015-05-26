@@ -12,7 +12,7 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 set background=dark
-colorscheme solarized
+colorscheme base16-tomorrow
 
 " Windows
 " ============================================================================

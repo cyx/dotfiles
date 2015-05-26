@@ -18,3 +18,6 @@ alias ag="ag -a"
 alias k9="killall -9"
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+
+## Base16 Color scheme
+source ~/.dotfiles/base16-shell/base16-tomorrow.dark.sh
