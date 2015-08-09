@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ "$1" == "hdpi" ]]; then
+	echo "Using HDPI mode"
+	cp ~/.Xresources.hdpi ~/.Xresources
+else
+	echo "Using default mode"
+	cp ~/.Xresources.default ~/.Xresources
+fi
+
+exec /usr/bin/startx

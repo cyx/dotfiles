@@ -1,0 +1,16 @@
+xterm*faceName: Monaco
+xterm*faceSize: 22
+xterm*colorBDMode: true
+xterm*colorULMode: true
+xterm*loginShell: true
+xterm*vt100*geometry: 80x32
+xterm*saveLines: 4096
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*boldMode: false
+xterm*locale: true
+xterm*metaSendsEscape: true
+xterm*selectToClipboard: true
+xterm*reverseVideo: off
+xterm*borderWidth: 0
+xterm*scaleHeight: 1.15
+XTerm*termName: xterm-256color
