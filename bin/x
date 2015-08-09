@@ -8,4 +8,7 @@ else
 	cp ~/.Xresources.default ~/.Xresources
 fi
 
-exec /usr/bin/startx
+# Append all the base16 colors for good measure.
+cat ~/.Xresources.base16 >> ~/.Xresources
+
+exec ssh-agent startx

@@ -5,7 +5,7 @@ xsetroot -cursor_name left_ptr
 setxkbmap -layout dvorak -option ctrl:nocaps
 
 xrdb ~/.Xresources
-feh --bg-fill ~/docs/pics/wallpaper.jpg
+feh --bg-fill ~/files/pics/wallpaper.jpg
 
 # our pretty little status bar
 xmobar &

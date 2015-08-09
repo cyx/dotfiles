@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -x
+
+# == Xresources
+cp ~/.dotfiles/Xresources.default ~/.Xresources.default
+cp ~/.dotfiles/Xresources.base16  ~/.Xresources.base16
+cp ~/.dotfiles/Xresources.hdpi    ~/.Xresources.hdpi
+
+# == X server config file
+cp ~/.dotfiles/xinitrc ~/.xinitrc
+
+# == Xmonad
+mkdir -p ~/.xmonad
+cp ~/.dotfiles/xmonad.hs ~/.xmonad
+
+# == Xmobarrc
+cp ~/.dotfiles/xmobarrc ~/.xmobarrc
