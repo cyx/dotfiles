@@ -1,1 +1,1 @@
-au FileType javascript setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
+au FileType javascript setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
