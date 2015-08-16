@@ -20,4 +20,4 @@ alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
 ## Base16 Color scheme
-source ~/.dotfiles/base16-shell/base16-default.dark.sh
+source ~/.dotfiles/base16-shell/base16-bespin.dark.sh
