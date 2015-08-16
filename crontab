@@ -1,0 +1,2 @@
+DISPLAY=:0
+* * * * * /usr/bin/feh --bg-fill $(ls files/pics/*.jpg | shuf | head -1)
