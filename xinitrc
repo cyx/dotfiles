@@ -10,5 +10,8 @@ feh --bg-fill $(ls files/pics/*.jpg | shuf | head -1)
 # our pretty little status bar
 xmobar &
 
+# lock the screen on sleep / close lid
+xss-lock -- i3lock -c 000000 &
+
 # start xmonad
 exec xmonad
