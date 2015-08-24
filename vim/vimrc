@@ -83,3 +83,7 @@ set backspace=indent,eol,start
 " Change mapping of CtrlP
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
+
+" Change go defaults; save will do :GoImports
+let g:go_fmt_command = "goimports"
+
