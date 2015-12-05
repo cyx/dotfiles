@@ -5,8 +5,11 @@ export EDITOR=vim
 export PATH=/opt/bin:$PATH:~/.dotfiles/bin
 export PS1='$ '
 export CHROMIUM_FLAGS="--disable-hang-monitor"
-export PATH=~/.gem/ruby/2.2.0/bin:~/.go/libraries/bin:~/.go/projects/bin:$PATH:~/.rbenv/bin
-export GOPATH=~/.go/libraries:~/.go/projects
+
+## Go specific stuff
+export PATH=~/.go/bin:$PATH
+export GOPATH=~/.go
+export CGO_ENABLED=0 # make everything scratch friendly
 
 ## Heroku toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
