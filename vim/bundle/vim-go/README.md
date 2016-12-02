@@ -1,13 +1,15 @@
 # vim-go
 
+<p align="center">
+  <img style="float: right;" src="assets/vim-go.png" alt="Vim-go logo"/>
+</p>
+
 Go (golang) support for Vim, which comes with pre-defined sensible settings (like
 auto gofmt on save), with autocomplete, snippet support, improved syntax
 highlighting, go toolchain commands, and more.  If needed vim-go installs all
 necessary binaries for providing seamless Vim integration with current
 commands. It's highly customizable and each individual feature can be
 disabled/enabled easily.
-
-![vim-go](https://dl.dropboxusercontent.com/u/174404/vim-go-2.png)
 
 ## Features
 
@@ -44,15 +46,13 @@ disabled/enabled easily.
 * Custom vim text objects such as `a function` or `inner function`
   list.
 * Jump to function or type declarations with `:GoDecls` or `:GoDeclsDir`
-* A async launcher for the go command is implemented for Neovim, fully async
-  building and testing (beta).
-* Integrated with the Neovim terminal, launch `:GoRun` and other go commands
-  in their own new terminal. (beta)
+* Vim 8.0 support. Async execution for most commands, various underlying improvements.
+* NeoVim support (beta). Async execution for some commands.
 * Alternate between implementation and test code with `:GoAlternate`
 
-Checkout the official [tutorial](https://github.com/fatih/vim-go-tutorial) 
-that goes literally over all features and shows many tips and tricks. It shows 
-how to install vim-go and explains many unknown use cases. Recommended for 
+Checkout the official [tutorial](https://github.com/fatih/vim-go-tutorial)
+that goes literally over all features and shows many tips and tricks. It shows
+how to install vim-go and explains many unknown use cases. Recommended for
 beginners as well as advanced users: https://github.com/fatih/vim-go-tutorial
 
 ## Install
@@ -290,7 +290,7 @@ other [various pieces](https://github.com/fatih/vim-go/wiki) of information.
 ## Donation
 
 People have asked for this for a long time, now you can be a fully supporter by
-[being a patron](https://www.patreon.com/fatih)! 
+[being a patron](https://www.patreon.com/fatih)!
 
 By being a patron, you are enabling vim-go to grow and mature, helping me to
 invest in bug fixes, new documentation, and improving both current and future

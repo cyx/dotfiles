@@ -125,12 +125,14 @@ hi def link     goComplexes         Type
 
 
 " Predefined functions and values
-syn match       goBuiltins          /\<\v(append|cap|close|complex|copy|delete|imag|len)\ze\(/
-syn match       goBuiltins          /\<\v(make|new|panic|print|println|real|recover)\ze\(/
-syn keyword     goBoolean           iota true false nil
+syn match       goBuiltins                 /\<\v(append|cap|close|complex|copy|delete|imag|len)\ze\(/
+syn match       goBuiltins                 /\<\v(make|new|panic|print|println|real|recover)\ze\(/
+syn keyword     goBoolean                  true false
+syn keyword     goPredefinedIdentifiers    nil iota
 
-hi def link     goBuiltins          Keyword
-hi def link     goBoolean           Boolean
+hi def link     goBuiltins                 Keyword
+hi def link     goBoolean                  Boolean
+hi def link     goPredefinedIdentifiers    goBoolean
 
 " Comments; their contents
 syn keyword     goTodo              contained TODO FIXME XXX BUG
@@ -175,7 +177,7 @@ else
 endif
 
 if g:go_highlight_format_strings != 0
-  syn match       goFormatSpecifier   /%[-#0 +]*\%(\*\|\d\+\)\=\%(\.\%(\*\|\d\+\)\)*[vTtbcdoqxXUeEfgGsp]/ contained containedin=goString
+  syn match       goFormatSpecifier   /\([^%]\(%%\)*\)\@<=%[-#0 +]*\%(\*\|\d\+\)\=\%(\.\%(\*\|\d\+\)\)*[vTtbcdoqxXUeEfgGsp]/ contained containedin=goString
   hi def link     goFormatSpecifier   goSpecialString
 endif
 
@@ -300,20 +302,22 @@ if g:go_highlight_functions != 0
   syn match goPointerOperator   /\*/ nextgroup=goReceiverType contained skipwhite skipnl
   syn match goReceiverType      /\w\+/ contained
   syn match goFunction          /\w\+/ contained
+  syn match goFunctionCall      /\w\+\ze(/ contains=GoBuiltins,goDeclaration
 else
   syn keyword goDeclaration func
 endif
 hi def link     goFunction          Function
+hi def link     goFunctionCall      Type
 
 " Methods;
 if g:go_highlight_methods != 0
-  syn match goMethod                /\.\w\+\ze(/hs=s+1
+  syn match goMethodCall            /\.\w\+\ze(/hs=s+1
 endif
-hi def link     goMethod            Type
+hi def link     goMethodCall        Type
 
 " Fields;
 if g:go_highlight_fields != 0
-  syn match goField                 /\.\w\+\([\ \n\r\:\)\[,]\)\@=/hs=s+1
+  syn match goField                 /\.\w\+\([.\ \n\r\:\)\[,]\)\@=/hs=s+1
 endif
 hi def link    goField              Identifier
 
@@ -322,7 +326,7 @@ if g:go_highlight_types != 0
   syn match goTypeConstructor      /\<\w\+{/he=e-1
   syn match goTypeDecl             /\<type\>/ nextgroup=goTypeName skipwhite skipnl
   syn match goTypeName             /\w\+/ contained nextgroup=goDeclType skipwhite skipnl
-  syn match goDeclType             /\<interface\|struct\>/ contained skipwhite skipnl
+  syn match goDeclType             /\<interface\|struct\>/ skipwhite skipnl
   hi def link     goReceiverType      Type
 else
   syn keyword goDeclType           struct interface
@@ -370,12 +374,7 @@ endif
 hi def link goCoverageNormalText Comment
 
 function! s:hi()
-  " :GoSameIds
-  if &background == 'dark'
-    hi def goSameId term=bold cterm=bold ctermbg=white ctermfg=black guibg=white guifg=black
-  else
-    hi def goSameId term=bold cterm=bold ctermbg=14 guibg=Cyan
-  endif
+  hi def link goSameId Search
 
   " :GoCoverage commands
   hi def      goCoverageCovered    ctermfg=green guifg=#A6E22E
