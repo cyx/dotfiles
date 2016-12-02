@@ -23,8 +23,18 @@ alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
 ## Base16 Color scheme
-source ~/.dotfiles/base16-shell/base16-solarized.dark.sh
+source ~/.dotfiles/base16-shell/base16-chalk.dark.sh
 
 godep_update() {
 	jq '.Deps | .[] | .ImportPath' Godeps/Godeps.json  | xargs go get -u
+}
+
+transfer() {
+	result=$(curl -T $1 transfer.sh -s)
+	echo $result | xsel --clipboard --input
+	echo $result
+}
+
+le() {
+	sudo certbot -d $1 --manual --preferred-challenges dns certonly
 }
