@@ -2,13 +2,13 @@
 
 ## Environment
 export EDITOR=vim
-export PATH=/opt/bin:$PATH:~/.dotfiles/bin:~/.gem/ruby/2.3.0/bin
+export PATH=/opt/bin:$PATH:~/.dotfiles/bin
 export PS1='$ '
 export CHROMIUM_FLAGS="--disable-hang-monitor"
 
 ## Go specific stuff
-export PATH=~/.go/bin:$PATH
-export GOPATH=~/.go
+export PATH=~/.go/external/bin:~/.go/internal/bin:$PATH
+export GOPATH=~/.go/external:~/.go/internal
 export CGO_ENABLED=0 # make everything scratch friendly
 
 ## Heroku toolbelt
@@ -23,7 +23,7 @@ alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
 ## Base16 Color scheme
-source ~/.dotfiles/base16-shell/base16-chalk.dark.sh
+source ~/.dotfiles/base16-shell/base16-solarized.dark.sh
 
 godep_update() {
 	jq '.Deps | .[] | .ImportPath' Godeps/Godeps.json  | xargs go get -u
