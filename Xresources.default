@@ -1,5 +1,5 @@
-xterm*faceName: Monaco
-xterm*faceSize: 22
+xterm*faceName: Droid Sans Mono
+xterm*faceSize: 18
 xterm*colorBDMode: true
 xterm*colorULMode: true
 xterm*loginShell: true
