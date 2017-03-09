@@ -41,6 +41,12 @@ function! go#rename#Rename(bang, ...) abort
 
   let cmd = [bin_path, "-offset", offset, "-to", to_identifier]
 
+  " check for any tags
+  if exists('g:go_build_tags')
+    let tags = get(g:, 'go_build_tags')
+    call extend(cmd, ["-tags", tags])
+  endif
+
   if go#util#has_job()
     call go#util#EchoProgress(printf("renaming to '%s' ...", to_identifier))
     call s:rename_job({
@@ -85,8 +91,8 @@ function s:rename_job(args)
   endfunction
 
   let start_options = {
-        \ 'callback': function("s:callback"),
-        \ 'close_cb': function("s:close_cb"),
+        \ 'callback': funcref("s:callback"),
+        \ 'close_cb': funcref("s:close_cb"),
         \ }
 
   " modify GOPATH if needed
