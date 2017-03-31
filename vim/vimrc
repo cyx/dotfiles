@@ -38,6 +38,12 @@ inoremap jk <ESC>
 :noremap <leader>n :NERDTreeToggle<CR>
 :noremap <leader>b :CtrlPBuffer<CR>
 
+:noremap <leader>gb :GoBuild<CR>
+:noremap <leader>gr :GoRun<CR>
+:noremap <leader>gl :GoLint<CR>
+:noremap <leader>gm :GoMetaLinter<CR>
+:noremap <leader>gt :GoTest<CR>
+
 " Tabs
 " ============================================================================
 set textwidth=0
@@ -79,14 +85,3 @@ let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
 
 " Change go defaults; save will do :GoImports
 let g:go_fmt_command = "goimports"
-let g:syntastic_go_checkers = ['go', 'golint', 'govet']
-let g:syntastic_aggregate_errors = 1
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
