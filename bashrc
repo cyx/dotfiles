@@ -2,7 +2,7 @@
 
 ## Environment
 export EDITOR=vim
-export PATH=/opt/bin:$PATH:~/.dotfiles/bin:~/.gem/ruby/2.4.0/bin
+export PATH=/opt/bin:$PATH:~/.dotfiles/bin:~/.gem/ruby/2.4.0/bin:~/.gem/ruby/2.3.0/bin
 export PS1='$ '
 export CHROMIUM_FLAGS="--disable-hang-monitor"
 
@@ -25,10 +25,6 @@ alias pbpaste='xsel --clipboard --output'
 ## Base16 Color scheme
 source ~/.dotfiles/base16-shell/base16-solarized.dark.sh
 
-godep_update() {
-	jq '.Deps | .[] | .ImportPath' Godeps/Godeps.json  | xargs go get -u
-}
-
 transfer() {
 	result=$(curl -T $1 transfer.sh -s)
 	echo $result | xsel --clipboard --input
@@ -37,4 +33,8 @@ transfer() {
 
 le() {
 	sudo certbot -d $1 --manual --preferred-challenges dns certonly
+}
+
+G() {
+	cd ~/.go/internal/src/github.com/$1
 }
