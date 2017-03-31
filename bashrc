@@ -2,7 +2,7 @@
 
 ## Environment
 export EDITOR=vim
-export PATH=/opt/bin:$PATH:~/.dotfiles/bin
+export PATH=/opt/bin:$PATH:~/.dotfiles/bin:~/.gem/ruby/2.4.0/bin
 export PS1='$ '
 export CHROMIUM_FLAGS="--disable-hang-monitor"
 
