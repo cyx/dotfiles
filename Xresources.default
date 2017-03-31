@@ -14,3 +14,11 @@ xterm*reverseVideo: off
 xterm*borderWidth: 0
 xterm*scaleHeight: 1.15
 XTerm*termName: xterm-256color
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
