@@ -8,7 +8,7 @@ export CHROMIUM_FLAGS="--disable-hang-monitor"
 
 ## Go specific stuff
 export PATH=~/.go/external/bin:~/.go/internal/bin:$PATH
-export GOPATH=~/.go/external:~/.go/internal
+export GOPATH=~/go
 export CGO_ENABLED=0 # make everything scratch friendly
 
 ## Heroku toolbelt
