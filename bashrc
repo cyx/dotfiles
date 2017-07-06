@@ -7,7 +7,7 @@ export PS1='$ '
 export CHROMIUM_FLAGS="--disable-hang-monitor"
 
 ## Go specific stuff
-export PATH=~/.go/external/bin:~/.go/internal/bin:$PATH
+export PATH=/usr/local/go/bin:~/go/bin:$PATH
 export GOPATH=~/go
 export CGO_ENABLED=0 # make everything scratch friendly
 
@@ -36,5 +36,5 @@ le() {
 }
 
 G() {
-	cd ~/.go/internal/src/github.com/$1
+	cd $GOPATH/src/github.com/$1
 }
