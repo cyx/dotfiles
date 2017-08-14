@@ -23,7 +23,6 @@ set spelllang=en_us
 let mapleader = ","
 let maplocalleader = ","
 
-inoremap jk <ESC>
 :noremap <leader>v :vsp<CR>:enew<CR>:pwd<CR>
 :noremap <leader>s :split<CR>:enew<CR>:pwd<CR>
 :noremap <leader>l <C-w>l
