@@ -9,7 +9,6 @@ export CHROMIUM_FLAGS="--disable-hang-monitor"
 ## Go specific stuff
 export PATH=/usr/local/go/bin:~/go/bin:$PATH
 export GOPATH=~/go
-export CGO_ENABLED=0 # make everything scratch friendly
 
 ## Heroku toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
@@ -17,19 +16,16 @@ export PATH=/usr/local/heroku/bin:$PATH
 ## Common aliases
 alias startx="ssh-agent startx"
 alias vi="vim"
-alias ag="ag -a"
 alias k9="killall -9"
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
 
 ## Base16 Color scheme
 source ~/.dotfiles/base16-shell/base16-solarized.dark.sh
 
 transfer() {
-	result=$(curl -T $1 transfer.sh -s)
-	echo $result | xsel --clipboard --input
-	echo $result
+	if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
+	tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile;
 }
+
 
 le() {
 	sudo certbot -d $1 --manual --preferred-challenges dns certonly
