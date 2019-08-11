@@ -43,6 +43,10 @@ let maplocalleader = ","
 :noremap <leader>gl :GoLint<CR>
 :noremap <leader>gm :GoMetaLinter<CR>
 :noremap <leader>gt :GoTest<CR>
+:noremap <leader>gd :GoDef<CR>
+
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " Tabs
 " ============================================================================
