@@ -35,4 +35,13 @@ G() {
 	cd $GOPATH/src/github.com/$1
 }
 
+showcert() {
+	openssl s_client -connect $1:443 < /dev/null | openssl x509 -noout -text
+}
+
+git_rm_tag() {
+	git push --delete origin $1
+}
+
 test -f ~/.hooks_bashrc && source ~/.hooks_bashrc
+
