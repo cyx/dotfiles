@@ -2,6 +2,7 @@ call pathogen#infect()
 
 syntax on
 filetype indent plugin on
+set omnifunc=syntaxcomplete#Complete
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -37,6 +38,7 @@ let maplocalleader = ","
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 :noremap <leader>n :NERDTreeToggle<CR>
 :noremap <leader>b :CtrlPBuffer<CR>
+imap jj <Esc>
 
 :noremap <leader>gb :GoBuild<CR>
 :noremap <leader>gr :GoRun<CR>
@@ -89,3 +91,5 @@ let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
 
 " Change go defaults; save will do :GoImports
 let g:go_fmt_command = "goimports"
+
+let g:notes_directories = ['~/Documents/Notes']
