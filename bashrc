@@ -43,5 +43,14 @@ git_rm_tag() {
 	git push --delete origin $1
 }
 
+git_rm_merged() {
+	git branch --merged main | xargs git branch -d
+}
+
+goc() {
+	go test -coverprofile cover.out "$1" "$2"
+	go tool cover -html cover.out
+}
+
 test -f ~/.hooks_bashrc && source ~/.hooks_bashrc
 
